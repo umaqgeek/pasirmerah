@@ -1,0 +1,1651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>DinarPal</title>
+	<link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url();?>images/favicon.ico">
+	<!-- core CSS -->
+    <link href="<?php echo base_url();?>css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo base_url();?>css/font-awesome.min.css" rel="stylesheet">
+    <link href="<?php echo base_url();?>css/animate.min.css" rel="stylesheet">
+    <link href="<?php echo base_url();?>css/owl.carousel.css" rel="stylesheet">
+    <link href="<?php echo base_url();?>css/owl.transitions.css" rel="stylesheet">
+    <link href="<?php echo base_url();?>css/prettyPhoto.css" rel="stylesheet">
+    <link href="<?php echo base_url();?>css/main.css" rel="stylesheet">
+    <link href="<?php echo base_url();?>css/responsive.css" rel="stylesheet">
+	
+	 <link href="<?php echo base_url();?>csss/font-awesome.min.css" rel="stylesheet">
+	 
+	<!--<link href="<?php echo base_url();?>csss/bootstrap.min.css" rel="stylesheet">
+   
+    <link href="<?php echo base_url();?>csss/prettyPhoto.css" rel="stylesheet">
+    <link href="<?php echo base_url();?>csss/animate.css" rel="stylesheet">
+    <link href="<?php echo base_url();?>csss/main.css" rel="stylesheet"> -->
+	
+	
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->       
+    <link rel="shortcut icon" href="images/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php echo base_url();?>images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo base_url();?>images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo base_url();?>images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="<?php echo base_url();?>images/ico/apple-touch-icon-57-precomposed.png">
+	
+	<style> 
+	.myButton {
+	-moz-box-shadow:inset 0px 1px 0px 0px #fff6af;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #fff6af;
+	box-shadow:inset 0px 1px 0px 0px #fff6af;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffec64), color-stop(1, #ffab23));
+	background:-moz-linear-gradient(top, #ffec64 5%, #ffab23 100%);
+	background:-webkit-linear-gradient(top, #ffec64 5%, #ffab23 100%);
+	background:-o-linear-gradient(top, #ffec64 5%, #ffab23 100%);
+	background:-ms-linear-gradient(top, #ffec64 5%, #ffab23 100%);
+	background:linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffec64', endColorstr='#ffab23',GradientType=0);
+	background-color:#ffec64;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #ffaa22;
+	display:inline-block;
+	cursor:pointer;
+	color:#333333;
+	font-family:Arial;
+	font-size:14px;
+	font-weight:bold;
+	padding:2px 14px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffee66;
+}
+.myButton:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffab23), color-stop(1, #ffec64));
+	background:-moz-linear-gradient(top, #ffab23 5%, #ffec64 100%);
+	background:-webkit-linear-gradient(top, #ffab23 5%, #ffec64 100%);
+	background:-o-linear-gradient(top, #ffab23 5%, #ffec64 100%);
+	background:-ms-linear-gradient(top, #ffab23 5%, #ffec64 100%);
+	background:linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffab23', endColorstr='#ffec64',GradientType=0);
+	background-color:#ffab23;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+	</style>
+	
+	<style><!--  drop down menu  -->
+	
+	
+
+/*---------- BODY --------------------------------*/
+
+body {
+	text-align: center;
+	background: #e0e0e0;
+	padding-bottom: 200px;
+}
+
+a {
+	text-decoration: none;
+}
+
+/*---------- Wrapper --------------------*/
+
+nav {
+	width: 100%;
+	height: 100px;
+	background: #222;
+}
+
+ul {
+	text-align: center;
+}
+
+ul li {
+	font: 13px Verdana, 'Lucida Grande';
+	cursor: pointer;
+	-webkit-transition: padding .05s linear;
+	-moz-transition: padding .05s linear;
+	-ms-transition: padding .05s linear;
+	-o-transition: padding .05s linear;
+	transition: padding .05s linear;
+}
+ul li.drop {
+	position: relative;
+}
+ul > li {
+	display: inline-block;
+}
+ul li a {
+	line-height: 80px;
+	padding: 0 20px;
+	height: 80px;
+	color: #777;
+	-webkit-transition: all .1s ease-out;
+	-moz-transition: all .1s ease-out;
+	-ms-transition: all .1s ease-out;
+	-o-transition: all .1s ease-out;
+	transition: all .1s ease-out;
+}
+ul li a:hover {
+	color: #eee;
+}
+
+.dropOut .triangle {
+	width: 0;
+	height: 0;
+	position: absolute;
+	border-left: 8px solid transparent;
+	border-right: 8px solid transparent;
+	border-bottom: 8px solid white;
+	top: -8px;
+	left: 50%;
+	margin-left: -8px;
+}
+.dropdownContain {
+	width: 160px;
+	position: absolute;
+	z-index: 2;
+	left: 50%;
+	margin-left: -80px; /* half of width */
+	top: -400px;
+}
+.dropOut {
+	width: 160px;
+	background: white;
+	float: left;
+	position: relative;
+	margin-top: 0px;
+	opacity: 0;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	-webkit-box-shadow: 0 1px 6px rgba(0,0,0,.15);
+	-moz-box-shadow: 0 1px 6px rgba(0,0,0,.15);
+	box-shadow: 0 1px 6px rgba(0,0,0,.15);
+	-webkit-transition: all .1s ease-out;
+	-moz-transition: all .1s ease-out;
+	-ms-transition: all .1s ease-out;
+	-o-transition: all .1s ease-out;
+	transition: all .1s ease-out;
+}
+
+.dropOut ul {
+	float: left;
+	padding: 10px 0;
+}
+.dropOut ul li {
+	text-align: left;
+	float: left;
+	width: 125px;
+	padding: 12px 0 10px 15px;
+	margin: 0px 10px;
+	color: #777;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	-webkit-transition: background .1s ease-out;
+	-moz-transition: background .1s ease-out;
+	-ms-transition: background .1s ease-out;
+	-o-transition: background .1s ease-out;
+	transition: background .1s ease-out;
+}
+
+.dropOut ul li:hover {
+	background: #f6f6f6;
+}
+
+ul li:hover a { color: white; }
+ul li:hover .dropdownContain { top: 65px; }
+ul li:hover .underline { border-bottom-color: #777; }
+ul li:hover .dropOut { opacity: 1; margin-top: 8px; }
+	
+	
+	</style>
+	
+</head><!--/head-->
+
+<body id="home" class="homepage">
+
+    <header id="header">
+        <nav id="main-menu" class="navbar navbar-default navbar-fixed-top" role="banner">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html"><img src="<?php echo base_url();?>images/DP-Logo-small.png" width="190" height="50" alt="logo"></a>
+                </div>
+				
+                <div class="collapse navbar-collapse navbar-right">
+                    <ul class="nav navbar-nav">
+                        <li class="scroll active"><a href="#home">Home</a></li>
+                        <li class="scroll"><a href="#features">DinarPal</a></li>
+                        <li class="scroll"><a href="#services">Send</a></li>
+                        <li class="scroll"><a href="#portfolio">Keep</a></li>
+                        <li class="scroll"><a href="#sell">Sell</a></li>
+                        <li class="scroll"><a href="#buy">Buy</a></li>
+                        <li class="scroll"><a href="#bid">Bid</a></li>
+						
+						<li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">More <i class="icon-angle-down"></i></a>
+						
+                        <ul class="dropdown-menu">
+					
+                            <li><a href="career.html">About Us</a></li><br />
+                            <li><a href="blog-item.html">Partners</a></li><br />
+                            <li><a href="pricing.html">Licensor-Licensee</a></li><br />
+                            <li><a href="404.html">The Compliances</a></li><br />
+                            <li><a href="registration.html">Awards & Recognitions</a></li><br />
+							<li><a href="registration.html">Intellectual Properties</a></li><br />
+							<li><a href="registration.html">Fees</a></li><br />
+							<li class="scroll"><a href="#privacy">Privacy Policy</a></li><br />
+							<li><a href="registration.html">Terms & Conditions</a></li><br />
+                           
+                        </ul>
+                        </li>
+						
+						 <li class="scroll"><a href="<?php echo site_url('main/signin') ?>"><input type="submit" class="myButton" value="Log In"></a></li> 
+						
+                      
+					<!--	<li class="drop">
+				        <a href="#">More <i class="icon-angle-down"></i></a>
+				
+				        <div class="dropdownContain">
+					        <div class="dropOut">
+						    <div class="triangle"></div>
+						    <ul>
+							   <li>  About Us </li> 
+							   <li> Partners  </li>
+							   <li>Licensor-Licensee</li>
+							   <li>The Compliances</li>
+							   <li>Awards & Recognitions</li>
+							   <li>Intellectual Properties</li>
+							   <li>Fees</li>
+							   <li>Privacy Policy</li>
+							   <li>Terms & Conditions</li>
+							   
+						    </ul>
+					        </div>
+				        </div>
+			
+			            </li> -->
+						
+                       
+                            					
+                    </ul>
+                </div>
+            </div><!--/.container-->
+        </nav><!--/nav-->
+    </header><!--/header-->
+
+    <section id="main-slider">
+        <div class="owl-carousel">
+		
+             <div class="item" style="background-image: url(<?php echo base_url();?>images/slider/bg3.jpg);">
+                <div class="slider-inner">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="carousel-content">
+                                    <h2>Surah Al-Imran: Verse 75</h2>
+                                    <p>"And Among the People of the Book, there are people who, if thou trust him with a weight of treasure, will return it (properly) to you, and some of them who, if though trust store 1 dinar already"</p>
+                                    <a class="btn btn-primary btn-lg" href="#">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!--/.item-->
+			
+             <div class="item" style="background-image: url(<?php echo base_url();?>images/slider/bg4.jpg);">
+                <div class="slider-inner">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="carousel-content">
+                                    <h2>High financing <span> & </span> Low fees </h2>
+                                    <p>The enlightenment of Ar-Rahnu specially for you</p>
+                                    <a class="btn btn-primary btn-lg" href="#">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!--/.item-->
+			
+			 <div class="item" style="background-image: url(<?php echo base_url();?>images/slider/bg6.jpg);">
+                <div class="slider-inner">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="carousel-content">
+                                    <h2>Payments in Dinar  <span> & </span> Dirham</h2>
+                                    <p>Syariah currency is the best performing currency  </p>
+                                    <a class="btn btn-primary btn-lg" href="#">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!--/.item-->
+			
+			<div class="item" style="background-image: url(<?php echo base_url();?>images/slider/bg9.jpg);">
+                <div class="slider-inner">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="carousel-content">
+                                    <h2>Saving in Dinar <span> & </span> Dirham</h2>
+                                    <p>Enjoy saving Dinar and Dirham with us </p>
+                                    <a class="btn btn-primary btn-lg" href="#">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!--/.item-->
+			
+			<div class="item" style="background-image: url(<?php echo base_url();?>images/slider/bg5.jpg);">
+                <div class="slider-inner">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="carousel-content">
+                                    <h2>Sell <span> & </span> sell <span> & </span> sell...</h2>
+                                    <p> If you have anything to sell please snap and upload to our marketplace or your own online mall and enjoy doing business with us. The launching day is just round the corner</p>
+                                    <a class="btn btn-primary btn-lg" href="#">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!--/.item-->
+			
+			<div class="item" style="background-image: url(<?php echo base_url();?>images/slider/bg7.jpg);">
+                <div class="slider-inner">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="carousel-content">
+                                    <h2>Open for HALAL business</h2>
+                                    <p>Now you can purchase on HALAL marketplace and our merchant online mall using your DinarPal Digital Wallet. Please wait for the launching day</p>
+                                    <a class="btn btn-primary btn-lg" href="#">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!--/.item-->
+			
+			
+			
+			<div class="item" style="background-image: url(<?php echo base_url();?>images/slider/bg8.jpg);">
+                <div class="slider-inner">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="carousel-content">
+                                    <h2>Bid <span> & </span> Won </h2>
+                                    <p> Enjoy gold and silver bidding with us</p>
+                                    <a class="btn btn-primary btn-lg" href="#">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!--/.item-->
+			
+			
+        </div><!--/.owl-carousel-->
+    </section><!--/#main-slider-->
+
+    <section id="cta" class="wow fadeIn">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-9">
+                    <h2>Saving, transfering and monetizing your dinar and dirham .</h2>
+                    <p>Feel the excitement of DinarPal gold and silver league by 
+					purchasing 0.5 gram of 24K purity.&nbsp;
+                    </p>
+                </div>
+                <div class="col-sm-3 text-right">
+                    <a class="btn btn-primary btn-lg" href="#">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </section><!--/#cta-->
+
+    <section id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title text-center wow fadeInDown">DinarPal </h2>
+                <p class="text-center wow FadeInDown">Alternative way to get 
+				fast cash on the basis of syariah mortgage principle (Ar-Rahnu) 
+				with fully insured and its 
+				more than an ordinary pawn business</p>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 wow fadeInLeft">
+                    <img class="img-responsive" src="<?php echo base_url();?>images/emas.png" alt="">
+                </div>
+                <div class="col-sm-6">
+                    <div class="media service-box wow fadeInRight">
+                        <div class="pull-left">
+                            <i class="fa fa-line-chart"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">High Financing</h4>
+                            <p class="text-justify wow FadeInDown">Just imagine 
+							now you can pawn your gold and silver via online 
+							enjoy the financing up to 80% from your precious 
+							metal value with 7 month duration and can be renew.</p>
+                        </div>
+                    </div>
+
+                    <div class="media service-box wow fadeInRight">
+                        <div class="pull-left">
+                            <i class="fa fa-cubes"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Low Safe Keeping Fees</h4>
+                            <p class="text-justify wow FadeInDown">Your safe keeping fee is only MYR 0.55 per 
+							MYR100.00 loan given per month.</p>
+                        </div>
+                    </div>
+
+                    <div class="media service-box wow fadeInRight">
+                        <div class="pull-left">
+                            <i class="fa fa-pie-chart"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Special Features</h4>
+                            <p class="text-justify wow FadeInDown">Enjoy the special features 
+							such as price update, rahnu calculator, pay your 
+							fees, renew your contract, redeem your items, print 
+							your receipts, purchase DinarPal collections, 
+							advertise your collections and many more.</p>
+                        </div>
+                    </div>
+
+                    <div class="media service-box wow fadeInRight">
+                        <div class="pull-left">
+                            <i class="fa fa-pie-chart"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Hassle-Free</h4>
+                            <p class="text-justify wow FadeInDown">You can pay 
+							for your rahnu loan as any amount you want to and at 
+							zero interest and no penalty charges and no hidden 
+							charges.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cta2">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="0ms">
+				<h2 class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="0ms"><span>GO </span>FOR DINAR AND DIRHAM</h2>
+                <p class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="100ms">Abu Bakr ibn Abi Maryam reported that he heard the Messenger of Allah, may Allah bless him and grant him peace, say: "A time is certainly coming over mankind in which there will be nothing [left] which will be of use save a dinar and a dirham." (The Musnad of Imam Ahmad ibn Hanbal)</p>
+                <p class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="200ms"><a class="btn btn-primary btn-lg" href="#">Join Us Now</a></p>
+                <img class="img-responsive wow fadeIn" src="<?php echo base_url();?>images/cta2/cta9-img.png" alt="" data-wow-duration="300ms" data-wow-delay="300ms">
+            </div>
+        </div>
+    </section>
+
+    <section id="services" >
+        <div class="container">
+
+            <div class="section-header">
+                <h2 class="section-title text-center wow fadeInDown">DinarPal 
+				Gram Transactions</h2>
+                <p class="text-center wow fadeInDown">Feel the new excitement 
+				using dinar and dirham (gram)&nbsp; to make payment or to 
+				receive payment. </p>
+            </div>
+
+            <div class="row">
+                <div class="features">
+                    <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="0ms">
+                        <div class="media service-box">
+                            <div class="pull-left">
+                                <i class="fa fa-line-chart"></i>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">Send Payment For Free</h4>
+                                <p class="text-justify wow FadeInDown">You can send unlimited payment using gram or 
+								money among members with no cost. The minimum transfer 
+								amount  is MYR2.00 for money and 0.5 gram for gold 
+								and silver</p>
+                            </div>
+                        </div>
+                    </div><!--/.col-md-4-->
+
+                    <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="100ms">
+                        <div class="media service-box">
+                            <div class="pull-left">
+                                <i class="fa fa-cubes"></i>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">Receive Payment</h4>
+                                <p class="text-justify wow FadeInDown">Accepting 
+								payment into your account just only 3% fee from 
+								the amount receive + MYR1.50 FPX fee</p>
+                            </div>
+                        </div>
+                    </div><!--/.col-md-4-->
+
+                    <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="200ms">
+                        <div class="media service-box">
+                            <div class="pull-left">
+                                <i class="fa fa-pie-chart"></i>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">Dynamic Authentication</h4>
+                                <p>We verify your identity via phone (sms), strong password, and One Time Passwords.</p>
+                            </div>
+                        </div>
+                    </div><!--/.col-md-4-->
+                
+                                   </div>
+            </div><!--/.row-->    
+        </div><!--/.container-->
+    </section><!--/#services-->
+
+	<section id="cta2">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="0ms"><span>DINAR</span> AND DIRHAM PROTECTING YOUR WEALTH</h2>
+                <p class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="100ms">Thus, Gold is the security for you and your family and should exits in every household as capital production</p>
+                <p class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="200ms"><a class="btn btn-primary btn-lg" href="#">Join Us Now</a></p>
+                <img class="img-responsive wow fadeIn" src="<?php echo base_url();?>images/cta2/cta3-img.png" alt="" data-wow-duration="300ms" data-wow-delay="300ms">
+            </div>
+        </div>
+    </section>
+	
+    <section id="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title text-center wow fadeInDown">DinarPal for Saving</h2>
+                <p class="text-center wow fadeInDown">Keep your montlhy saving 
+				of gold and silver or dinar and dirham in our secure vault and 
+				make it accessible.</p>
+            </div>
+
+            <div class="row">
+			    
+				<div class="col-sm-6">
+                    <div class="media service-box wow fadeInRight">
+                        <div class="pull-left">
+                            <i class="fa fa-line-chart"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Fully Insured</h4>
+                            <p>Every gram of gold and silver is insured through the 
+							YAPIEM Group of Insurance against theft or loss.</p>
+                        </div>
+                    </div>
+
+                    <div class="media service-box wow fadeInRight">
+                        <div class="pull-left">
+                            <i class="fa fa-cubes"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Low Storage Fees</h4>
+                            <p>Store as many as you can for just MYR13.00 fee 
+							per year.</p>
+                        </div>
+                    </div>
+
+                    <div class="media service-box wow fadeInRight">
+                        <div class="pull-left">
+                            <i class="fa fa-pie-chart"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Financial Reporting</h4>
+                            <p>We provide reporting tools to keep track of all 
+							your transactions and records making your vaulted 
+							gold feel digital.</p>
+                        </div>
+                    </div>
+
+                    <div class="media service-box wow fadeInRight">
+                        <div class="pull-left">
+                            <i class="fa fa-pie-chart"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Syariah Compliance</h4>
+                            <p>Al-Wadiah system.You can withdraw your items at 
+							anytime.</p>
+                        </div>
+                    </div>
+                </div>
+				
+			
+                <div class="col-sm-6 wow fadeInLeft">
+                    <img class="img-responsive" src="<?php echo base_url();?>images/Guardian-Safe.png" alt="">
+                </div>
+                
+            </div>
+				
+				
+          
+        </div><!--/.container-->
+    </section><!--/#portfolio-->
+	
+	<section id="cta2">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="0ms"><span>YES!!</span> IN 1,400 YEARS INFLATION IS ZERO</h2>
+                <p class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="100ms">A chicken at the time of the Prophet, salla'llahu alaihi wa sallam, cost one dirham; today, 1,400 years later, a chicken costs approximately one dirham</p>
+                <p class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="200ms"><a class="btn btn-primary btn-lg" href="#">Join Us Now</a></p>
+                <img class="img-responsive wow fadeIn" src="<?php echo base_url();?>images/cta2/cta4-img.png" alt="" data-wow-duration="300ms" data-wow-delay="300ms">
+            </div>
+        </div>
+    </section>
+	
+	<section id="sell">
+        <div class="container">
+            <div class="section-header">
+			    <br /><br /><br /><br />
+                <h2 class="section-title text-center wow fadeInDown">Sell</h2>
+                <p class="text-center wow fadeInDown">If you have something to 
+				sell on your website we suggest you to start accepting payments 
+				using DinarPal payment button on DinarPal Payment Gateway.</p>
+            </div>
+
+            <div class="row">
+                <!--<div class="col-sm-6 wow fadeInLeft">
+                    <img class="img-responsive" src="<?php echo base_url();?>images/shopping.jpg" alt="">
+                </div>-->
+                <div class="col-sm-6">
+                    <div class="media service-box wow fadeInRight">
+                        <div class="pull-left">
+                            <i class="fa fa-line-chart"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Unique Button</h4>
+                            <p>Add a DinarPal button by pasting our code on your website</p>
+                        </div>
+                    </div>
+
+                    <div class="media service-box wow fadeInRight">
+                        <div class="pull-left">
+                            <i class="fa fa-cubes"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Accept Major Debit Card</h4>
+                            <p>Let the world know you now accept all major credit and debit card</p>
+                        </div>
+                    </div>
+
+                    <div class="media service-box wow fadeInRight">
+                        <div class="pull-left">
+                            <i class="fa fa-pie-chart"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Easy To Sell</h4>
+                            <p>Make your business mobile</p>
+                        </div>
+                    </div>
+
+                                    </div>
+            </div>
+				
+				
+          
+        </div><!--/.container-->
+    </section><!--/#portfolio-->
+	
+		<section id="cta2">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="0ms"><span>GOLD</span> CANNOT BE INFLATED BY PRINTING MORE OF IT</h2>
+                <p class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="100ms">They are used to buy and sell since they are a legitimate medium of exchange</p>
+                <p class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="200ms"><a class="btn btn-primary btn-lg" href="#">Join Us Now</a></p>
+                <img class="img-responsive wow fadeIn" src="<?php echo base_url();?>images/cta2/cta5-img.png" alt="" data-wow-duration="300ms" data-wow-delay="300ms">
+            </div>
+        </div>
+    </section>
+	
+	<section id="buy">
+        <div class="container">
+            <div class="section-header">
+			 <br /><br /><br /><br />
+                <h2 class="section-title text-center wow fadeInDown">Buy</h2>
+                <p class="text-center wow fadeInDown">Buy it using Dinar and Dirham. We process every single purchase with ease. Simply login, check out, and wait for the doorbell </p>
+            </div>
+
+            <div class="row">
+                
+                <div class="col-sm-6">
+                    <div class="media service-box wow fadeInRight">
+                        <div class="pull-left">
+                            <i class="fa fa-line-chart"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Shop on SouqAnshar</h4>
+                            <p>Enjoy our HALAL marketplace</p>
+                        </div>
+                    </div>
+
+                    <div class="media service-box wow fadeInRight">
+                        <div class="pull-left">
+                            <i class="fa fa-cubes"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Free Sign Up</h4>
+                            <p>Login and enjoy</p>
+                        </div>
+                    </div>
+
+                    <div class="media service-box wow fadeInRight">
+                        <div class="pull-left">
+                            <i class="fa fa-pie-chart"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Easy To Buy</h4>
+                            <p>Shop until you drop</p>
+                        </div>
+                    </div>
+
+                    <div class="media service-box wow fadeInRight">
+                        <div class="pull-left">
+                            <i class="fa fa-pie-chart"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Syariah Compliance</h4>
+                            <p>Muammalah system </p>
+                        </div>
+                    </div>
+                </div>
+				
+				
+				<div class="col-sm-6 wow fadeInLeft">
+                    <img class="img-responsive" src="<?php echo base_url();?>images/DnD-Landing-Page.png" alt="">
+                </div>
+				
+				
+            </div>
+				
+				
+          
+        </div><!--/.container-->
+    </section><!--/#portfolio-->
+	
+	
+	
+	
+	
+	<section id="cta2">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="0ms"><span>GOLD</span> IS MONEY AND MONEY IS A CURRENCY</h2>
+                <p class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="100ms">Thus, Gold is the security for you and your family and should exits in every household as capital production</p>
+                <p class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="200ms"><a class="btn btn-primary btn-lg" href="#">Join Us Now</a></p>
+                <img class="img-responsive wow fadeIn" src="<?php echo base_url();?>images/cta2/cta8-img.png" alt="" data-wow-duration="300ms" data-wow-delay="300ms">
+            </div>
+        </div>
+    </section>
+	
+	
+	
+	<section id="bid">
+        <div class="container">
+            <div class="section-header">
+			 <br /><br /><br /><br />
+                <h2 class="section-title text-center wow fadeInDown">Bid</h2>
+                <p class="text-center wow fadeInDown">For those members who not 
+				plan to redeem their precious item, we help them to sell in our 
+				private auction session</p>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6 wow fadeInLeft">
+                    <img class="img-responsive" src="<?php echo base_url();?>images/auction-hammer.jpg" alt="">
+                </div>
+                <div class="col-sm-6">
+                    <div class="media service-box wow fadeInRight">
+                        <div class="pull-left">
+                            <i class="fa fa-line-chart"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Unlimited Bidding</h4>
+                            <p>Bid until you win</p>
+                        </div>
+                    </div>
+
+                    <div class="media service-box wow fadeInRight">
+                        <div class="pull-left">
+                            <i class="fa fa-cubes"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Low Entering Fees</h4>
+                            <p>Only MYR10.00 per session</p>
+                        </div>
+                    </div>
+
+                    <div class="media service-box wow fadeInRight">
+                        <div class="pull-left">
+                            <i class="fa fa-pie-chart"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Easy To Bid</h4>
+                            <p>Bit among the best and no joy bidders</p>
+                        </div>
+                    </div>
+
+                                    </div>
+            </div>
+				
+				
+          
+        </div><!--/.container-->
+    </section><!--/#portfolio-->
+	
+	<section id="cta2">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="0ms"><span>GOLD</span> IS MONEY AND MONEY IS A CURRENCY</h2>
+                <p class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="100ms">Thus, Gold is the security for you and your family and should exits in every household as capital production</p>
+                <p class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="200ms"><a class="btn btn-primary btn-lg" href="#">Join Us Now</a></p>
+                <img class="img-responsive wow fadeIn" src="<?php echo base_url();?>images/cta2/cta10-img.png" alt="" data-wow-duration="300ms" data-wow-delay="300ms">
+            </div>
+        </div>
+    </section>
+	
+
+    <section id="about">
+        <div class="container">
+
+            <div class="section-header">
+			    
+                <h2 class="section-title text-center wow fadeInDown">About Us</h2>
+                <p class="text-center wow fadeInDown">The new Rahnu player in 
+				town. Malaysia First Online Rahnu Operator.</p>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6 wow fadeInLeft">
+                    <h3 class="column-title">Video Pitching</h3>
+                    <!-- 16:9 aspect ratio -->
+                    <div class="embed-responsive embed-responsive-16by9">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/EfgoXzXgnIo" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 wow fadeInRight">
+                    <h3 class="column-title">Monetizing your dinar and dirham.</h3>
+                    <p>Welcome to the world of the Dinarpal Technology. Dinarpal is an Islamic integrated financial instrument provider with innovative visions in the technocratic arena.  </p>
+
+                    <p>We are leading, next generation of Islamic financial 
+					system technology&nbsp; with strong business interest in  </p>
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <ul class="nostyle" style="text-align: left;">
+                                <li>&nbsp;&nbsp;<i class="fa fa-check-square"></i> &nbsp;&nbsp;&nbsp;Ar-Rahnu</li>
+                                <li>&nbsp;&nbsp;<i class="fa fa-check-square"></i> &nbsp;&nbsp;&nbsp;Dinar Dirham Saving Account</li> <br />
+                            </ul>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <ul class="nostyle" style="text-align: left;">
+                                <li><i class="fa fa-check-square"></i> &nbsp;&nbsp;&nbsp;Halal MarketPlace</li>
+                                <li><i class="fa fa-check-square"></i> &nbsp;&nbsp;&nbsp;Dinar Dirham Payment Gateway</li>
+							
+                            </ul>
+                        </div>
+                    </div>
+
+                    
+
+                </div>
+            </div>
+        </div>
+    </section><!--/#about-->
+
+    <section id="work-process">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title text-center wow fadeInDown">Our Supporters and Partners</h2>
+                <p class="text-center wow fadeInDown">We are deeply grateful for the generosity of our funders, partners and sponsors who support key initiatives that move DinarPal forward. May Allah bless all of you</p>
+            </div>
+
+            <div class="row text-center">
+                <div class="col-md-2 col-md-4 col-xs-6">
+                    <div class="wow fadeInUp" data-wow-duration="400ms" data-wow-delay="0ms">
+                       
+						<img class="img-responsive wow fadeIn" src="<?php echo base_url();?>images/partners/LOGOMOSTI.png" alt="" data-wow-duration="300ms" data-wow-delay="300ms">
+                    
+                    </div>
+                </div>
+                <div class="col-md-2 col-md-4 col-xs-6">
+                    <div class="wow fadeInUp" data-wow-duration="400ms" data-wow-delay="100ms">
+					
+                       	<img class="img-responsive wow fadeIn" src="<?php echo base_url();?>images/partners/mof.png" alt="" data-wow-duration="300ms" data-wow-delay="300ms">
+						
+                    </div>
+                </div>
+                <div class="col-md-2 col-md-4 col-xs-6">
+                    <div class="wow fadeInUp" data-wow-duration="400ms" data-wow-delay="200ms">
+                        	
+							<img class="img-responsive wow fadeIn" src="<?php echo base_url();?>images/partners/cradle.png" alt="" data-wow-duration="300ms" data-wow-delay="300ms">
+                        
+                    </div>
+                </div>
+                <div class="col-md-2 col-md-4 col-xs-6">
+                    <div class="wow fadeInUp" data-wow-duration="400ms" data-wow-delay="300ms">
+                        <img class="img-responsive wow fadeIn" src="<?php echo base_url();?>images/partners/skm.png" alt="" data-wow-duration="300ms" data-wow-delay="300ms">
+                    </div>
+                </div>
+                <div class="col-md-2 col-md-4 col-xs-6">
+                    <div class="wow fadeInUp" data-wow-duration="400ms" data-wow-delay="300ms">
+                        <img class="img-responsive wow fadeIn" src="<?php echo base_url();?>images/partners/aim.png" alt="" data-wow-duration="300ms" data-wow-delay="300ms">
+                    </div>
+                </div>
+                <div class="col-md-2 col-md-4 col-xs-6">
+                    <div class="wow fadeInUp" data-wow-duration="400ms" data-wow-delay="300ms">
+                        <img class="img-responsive wow fadeIn" src="<?php echo base_url();?>images/partners/myipo.png" alt="" data-wow-duration="300ms" data-wow-delay="300ms">
+                    </div>
+                </div>
+				
+				
+            </div>
+        </div>
+    </section><!--/#work-process-->
+	
+	
+	<section id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title text-center wow fadeInDown">Licensor-Licensee</h2>
+                <p class="text-center wow fadeInDown">Leverage our effort. Join our licensor-licensee program and manage your own outlet through our program.Send us and email to the.management@dinarpal.com for more info.</p>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6 col-md-3">
+                    <div class="wow zoomIn" data-wow-duration="400ms" data-wow-delay="0ms">
+                        <ul class="pricing">
+                            <li class="plan-header">
+                                <div class="price-duration">
+                                    <span class="price">
+                                        1
+                                    </span>
+                                    <span class="duration">
+                                     
+                                    </span>
+                                </div>
+
+                                <div class="plan-name">
+                                    Master Licensee
+                                </div>
+                            </li>
+                            <li><strong>1</strong> per Country</li>
+                            <li><strong>Up</strong> to 300 Licensee</li>
+                            
+                            <li class="plan-purchase"><a class="btn btn-primary" href="#">ORDER NOW</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="wow zoomIn" data-wow-duration="400ms" data-wow-delay="200ms">
+                        <ul class="pricing featured">
+                            <li class="plan-header">
+                                <div class="price-duration">
+                                    <span class="price">
+                                        2
+                                    </span>
+                                   
+                                </div>
+
+                                <div class="plan-name">
+                                    Sub <br /> Licensee
+                                </div>
+                            </li>
+                              <li><strong>1</strong> per Country</li>
+                            <li><strong>Up</strong> to 10 Licensee</li>
+                            <li class="plan-purchase"><a class="btn btn-default" href="#">ORDER NOW</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="wow zoomIn" data-wow-duration="400ms" data-wow-delay="400ms">
+                        <ul class="pricing">
+                            <li class="plan-header">
+                                <div class="price-duration">
+                                    <span class="price">
+                                        3
+                                    </span>
+                                    
+                                </div>
+
+                                <div class="plan-name">
+                                    Coming <br />Soon
+                                </div>
+                            </li>
+                             <li><strong>To </strong> be announce</li>
+							 <li><strong></strong> soon</li>
+                          
+                            <li class="plan-purchase"><a class="btn btn-primary" href="#">ORDER NOW</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="wow zoomIn" data-wow-duration="400ms" data-wow-delay="600ms">
+                        <ul class="pricing">
+                            <li class="plan-header">
+                                <div class="price-duration">
+                                    <span class="price">
+                                       4
+                                    </span>
+                                  
+                                </div>
+
+                                <div class="plan-name">
+                                   Coming <br />Soon
+                                </div>
+                            </li>
+                            <li><strong>To </strong> be announce</li>
+							<li><strong></strong> soon</li>
+                            <li class="plan-purchase"><a class="btn btn-primary" href="#">ORDER NOW</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!--/#pricing-->
+	
+	
+		<section id="cta2">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="0ms"><span>THE</span> COMPLIANCES</h2>
+                <p class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="100ms">DinarPal Group always alert to the government rules and follow the orders to make sure our client protected. Below is the approval documents that related to us.</p>
+               
+                <img class="img-responsive wow fadeIn" src="<?php echo base_url();?>images/cta2/cta6-img.png" alt="" data-wow-duration="300ms" data-wow-delay="300ms">
+            </div>
+        </div>
+    </section>
+	
+
+    <section id="meet-team">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title text-center wow fadeInDown"> Awards and Recognitions </h2>
+                
+
+            </div>
+
+            <div class="row">
+			
+			    <div class="col-sm-6 col-md-3" >
+                    <div class="team-member wow fadeInUp" data-wow-duration="400ms" data-wow-delay="0ms" align="center">
+                        <div class="team-img">
+                            <img class="img-responsive" src="<?php echo base_url();?>images/team/010.png" alt="">
+                        </div>
+                        <div class="team-info">
+                            <h3>The Very Best Award</h3>
+                         
+                        </div>
+                        <p>Malaysia Innovation and Technology Expo 2013  <br /> 
+						21 - 23 Februari 2013 <br />
+						Putra World Trade Centre Kuala Lumpur</p>
+						
+                        
+                    </div>
+                </div>
+				
+				<div class="col-sm-6 col-md-3" >
+                    <div class="team-member wow fadeInUp" data-wow-duration="400ms" data-wow-delay="0ms" align="center">
+                        <div class="team-img">
+                            <img class="img-responsive" src="<?php echo base_url();?>images/team/09.png" alt="">
+                        </div>
+                        <div class="team-info">
+                            <h3>Gold Medal</h3>
+                        
+                        </div>
+                        <p>Malaysia Innovation and Technology Expo 2013 <br />
+						21 - 23 Februari 2013 <br />
+						Putra World Trade Centre Kuala Lumpur</p>
+                       
+                    </div>
+                </div>
+				
+				<div class="col-sm-6 col-md-3" >
+                    <div class="team-member wow fadeInUp" data-wow-duration="400ms" data-wow-delay="0ms" align="center">
+                        <div class="team-img">
+                            <img class="img-responsive" src="<?php echo base_url();?>images/team/011.png" alt="">
+                        </div>
+                        <div class="team-info">
+                            <h3>Special Awards</h3>
+                           
+                        </div>
+                        <p>Islamic Innovation Expo 2013 <br />
+						27 - 28 October 2013 <br />
+						Islamic Science University of Malaysia <br />
+						(USIM) Malaysia </p>
+                        
+                    </div>
+                </div>
+				
+				<div class="col-sm-6 col-md-3" >
+                    <div class="team-member wow fadeInUp" data-wow-duration="400ms" data-wow-delay="0ms" align="center">
+                        <div class="team-img">
+                            <img class="img-responsive" src="<?php echo base_url();?>images/team/012.png" alt="">
+                        </div>
+                        <div class="team-info">
+                            <h3>Wealth for Malaysia</h3>
+                            
+                        </div>
+                        <p>DinarPal listed as one of wealth for Malaysia in financial category as per publish in Innovation Business Opportunity Directory 
+						released by PMO  </p>
+                        
+                    </div>
+                </div>
+				
+				
+				
+				
+				
+				
+                
+            </div>
+
+            <div class="divider"></div>
+
+            
+
+           
+        </div>
+    </section><!--/#meet-team-->
+	
+		<section id="cta2">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="0ms"><span>THE</span> INTELLECTUAL PROPERTIES</h2>
+                <p class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="100ms">In order to ensure the quality of our services to our client we always strengthen our good will as follow:-.</p>
+               
+                <img class="img-responsive wow fadeIn" src="<?php echo base_url();?>images/cta2/cta7-img.png" alt="" data-wow-duration="300ms" data-wow-delay="300ms">
+            </div>
+        </div>
+    </section>
+	
+	<section id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title text-center wow fadeInDown">Fees</h2>
+                <p class="text-center wow fadeInDown">No hidden cost, No usury 
+				and no no no..</p>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6 col-md-3">
+                    <div class="wow zoomIn" data-wow-duration="400ms" data-wow-delay="0ms">
+                        <ul class="pricing">
+                            <li class="plan-header">
+                                <div class="price-duration">
+                                    <span class="price">
+                                        3%
+                                    </span>
+                                    <span class="duration">
+                                        per month
+                                    </span>
+                                </div>
+
+                                <div class="plan-name">
+                                    Starter
+                                </div>
+                            </li>
+                            <li><strong>1</strong> DOMAIN</li>
+                            <li><strong>100GB</strong> DISK SPACE</li>
+                            <li><strong>UNLIMITED</strong> BANDWIDTH</li>
+                            <li>SHARED SSL CERTIFICATE</li>
+                            <li><strong>10</strong> EMAIL ADDRESS</li>
+                            <li><strong>24/7</strong> SUPPORT</li>
+                            <li class="plan-purchase"><a class="btn btn-primary" href="#">ORDER NOW</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="wow zoomIn" data-wow-duration="400ms" data-wow-delay="200ms">
+                        <ul class="pricing featured">
+                            <li class="plan-header">
+                                <div class="price-duration">
+                                    <span class="price">
+                                        $69
+                                    </span>
+                                    <span class="duration">
+                                        per month
+                                    </span>
+                                </div>
+
+                                <div class="plan-name">
+                                    Business
+                                </div>
+                            </li>
+                            <li><strong>3</strong> DOMAIN</li>
+                            <li><strong>300GB</strong> DISK SPACE</li>
+                            <li><strong>UNLIMITED</strong> BANDWIDTH</li>
+                            <li>SHARED SSL CERTIFICATE</li>
+                            <li><strong>30</strong> EMAIL ADDRESS</li>
+                            <li><strong>24/7</strong> SUPPORT</li>
+                            <li class="plan-purchase"><a class="btn btn-default" href="#">ORDER NOW</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="wow zoomIn" data-wow-duration="400ms" data-wow-delay="400ms">
+                        <ul class="pricing">
+                            <li class="plan-header">
+                                <div class="price-duration">
+                                    <span class="price">
+                                        $99
+                                    </span>
+                                    <span class="duration">
+                                        per month
+                                    </span>
+                                </div>
+
+                                <div class="plan-name">
+                                    Pro
+                                </div>
+                            </li>
+                            <li><strong>5</strong> DOMAIN</li>
+                            <li><strong>500GB</strong> DISK SPACE</li>
+                            <li><strong>UNLIMITED</strong> BANDWIDTH</li>
+                            <li>SHARED SSL CERTIFICATE</li>
+                            <li><strong>50</strong> EMAIL ADDRESS</li>
+                            <li><strong>24/7</strong> SUPPORT</li>
+                            <li class="plan-purchase"><a class="btn btn-primary" href="#">ORDER NOW</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="wow zoomIn" data-wow-duration="400ms" data-wow-delay="600ms">
+                        <ul class="pricing">
+                            <li class="plan-header">
+                                <div class="price-duration">
+                                    <span class="price">
+                                        $199
+                                    </span>
+                                    <span class="duration">
+                                        per month
+                                    </span>
+                                </div>
+
+                                <div class="plan-name">
+                                    Ultra
+                                </div>
+                            </li>
+                            <li><strong>10</strong> DOMAIN</li>
+                            <li><strong>1000GB</strong> DISK SPACE</li>
+                            <li><strong>UNLIMITED</strong> BANDWIDTH</li>
+                            <li>SHARED SSL CERTIFICATE</li>
+                            <li><strong>100</strong> EMAIL ADDRESS</li>
+                            <li><strong>24/7</strong> SUPPORT</li>
+                            <li class="plan-purchase"><a class="btn btn-primary" href="#">ORDER NOW</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!--/#pricing-->
+	
+     <section id="privacy">
+		<section id="cta2">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="0ms"><span>THE</span> PRIVACY POLICY </h2>
+                <p class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="100ms">The following describes the privacy policy on which DinarPal offers you access to our services</p>
+               
+                <img class="img-responsive wow fadeIn" src="<?php echo base_url();?>images/cta2/cta7-img.png" alt="" data-wow-duration="300ms" data-wow-delay="300ms">
+            </div>
+        </div>
+    </section>
+     </section>
+	
+	
+	<section id="meet-team">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title text-center wow fadeInDown">TERMS & CONDITIONS </h2>
+                <p class="text-center wow fadeInDown">The following describes the terms and conditions on which DinarPal offers you access to our services </p>
+				
+				          
+				          
+				          
+
+
+            </div>
+
+           
+
+            <div class="divider"></div>
+
+            
+
+            </div>
+        </div>
+    </section><!--/#meet-team-->
+	
+	
+	
+
+	 <section id="meet-team">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title text-center wow fadeInDown"> Frequently Asked Questions </h2>
+                
+
+            </div>
+
+            
+
+            <div class="divider"></div>
+
+            <div class="row">
+              
+
+          
+               <div class="col-sm-4">
+                    <h3 class="column-title">FAQS - 1</h3>
+                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+					
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingOne">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        Who own this?
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                <div class="panel-body">
+                                    DinarPal is own by Al-DinarPal Group.</div>
+                            </div>
+                        </div>
+						
+						
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingTwo">
+                                <h4 class="panel-title">
+                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        What is DinarPal?
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                <div class="panel-body">
+                                    DinarPal is banking-like platform for Dinar 
+									(gold coin) and Dirham (silver coin).</div>
+                            </div>
+                        </div>
+						
+						
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingThree">
+                                <h4 class="panel-title">
+                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        DinarPal is a bank?
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                                <div class="panel-body">
+                                    No. DinarPal is not a bank.&nbsp; DinarPal 
+									prefer to be Baitul-Mal in the near future.
+                                </div>
+                            </div>
+                        </div>
+						
+						
+						
+						
+						
+						
+                    </div>
+                </div>
+
+               <div class="col-sm-4">
+                    <h3 class="column-title">FAQS - 2</h3>
+                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+					
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="heading1">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                                        How DinarPal can benefit me?
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapse1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading1">
+                                <div class="panel-body">
+                                    DinarPal can protect your wealth by offering 
+									you to buy at least 0.5 gram of gold bar 
+									every month and keep it in DinarPal secure 
+									vault. It also can off er you to start 
+									purchase things using dinar and dirham among 
+									members, Remain your purchasing power and 
+									inflation-free. DinarPal also can offer you 
+									to get some short-term loan without interest</div>
+                            </div>
+                        </div>
+						
+						
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="heading2">
+                                <h4 class="panel-title">
+                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                                        Does DinarPal trying to be a alternative 
+									currency?
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapse2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2">
+                                <div class="panel-body">
+                                    No.We just offer an alternative for medium 
+									of exchange. Our main currency is still MYR.</div>
+                            </div>
+                        </div>
+						
+						
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="heading3">
+                                <h4 class="panel-title">
+                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                                        How secure we are?
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapse3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading3">
+                                <div class="panel-body">
+                                    In sha Allah you will be safe with us. We provide 
+									the 24/7 security services with close 
+									monitoring and every gram is fully insured.For the security of your information during transmission is ensured.
+We guarantee secure data transmission by using Secure Sockets Layer (SSL short) protocol. With SSL, your personal information you enter on our Web site will be encrypted and can thus be read only by us.
+The SSL encryption protocol has been established as the market standard for data over the Internet and is continuously being developed.</div>
+                            </div>
+                        </div>
+						
+						
+						
+						
+						
+						
+                    </div>
+                </div>
+
+                <div class="col-sm-4">
+                    <h3 class="column-title">Faqs</h3>
+                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+					
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="heading4">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse4" aria-expanded="true" aria-controls="collapse4">
+                                        Enim eiusmod high life accusamus 3
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapse4" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading4">
+                                <div class="panel-body">
+                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum.
+                                </div>
+                            </div>
+                        </div>
+						
+						
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="heading5">
+                                <h4 class="panel-title">
+                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                                        Nihil anim keffiyeh helvetica 3
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapse5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading5">
+                                <div class="panel-body">
+                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum.
+                                </div>
+                            </div>
+                        </div>
+						
+						
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="heading6">
+                                <h4 class="panel-title">
+                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse6" aria-expanded="false" aria-controls="collapse6">
+                                        Vegan excepteur butcher vice lomo 3
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapse6" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading6">
+                                <div class="panel-body">
+                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum.
+                                </div>
+                            </div>
+                        </div>
+						
+						
+						
+						
+						
+						
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section><!--/#meet-team-->
+	
+	
+	
+    <section id="get-in-touch">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title text-center wow fadeInDown">Keep in Touch</h2>
+                <p class="text-center wow fadeInDown">WhatsUp us now at +60 
+				12-222 8069 </p>
+            </div>
+        </div>
+    </section><!--/#get-in-touch-->
+
+
+    <section id="contact">
+        <div id="google-map" style="height:650px" data-latitude="2.268099" data-longitude="102.2915632"></div>
+        <div class="container-wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4 col-sm-offset-8">
+                        <div class="contact-form">
+                            <h3>DinarPal International Office</h3>
+
+                            <address>
+                             <strong>Address</strong><br> 
+                              Suite 15 MITC<br>
+                              Commercial Street,<br>
+							  75450 Ayer Keroh Melaka <br>
+                              <abbr title="Phone">P:</abbr> +60 112 222 8069
+                            </address>
+
+                            <form id="main-contact-form" name="contact-form" method="post" action="#">
+                                <div class="form-group">
+                                    <input type="text" name="name" class="form-control" placeholder="Name" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" name="email" class="form-control" placeholder="Email" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="subject" class="form-control" placeholder="Subject" required>
+                                </div>
+                                <div class="form-group">
+                                    <textarea name="message" class="form-control" rows="8" placeholder="Message" required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Send Message</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!--/#bottom-->
+
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+				<br />
+                    &copy; All Right Reserved <a target="_blank" href="http://www.dinarpal.com" >DinarPal</a>  by Pisang Sdn. Bhd. 
+                </div>
+                <div class="col-sm-6">
+                    <ul class="social-icons">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                        <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                        <!--<li><a href="#"><i class="fa fa-behance"></i></a></li>-->
+                        <li><a href="#"><i class="fa fa-flickr"></i></a></li>
+                        <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        <!--<li><a href="#"><i class="fa fa-github"></i></a></li>-->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer><!--/#footer-->
+
+    <script src="<?php echo base_url();?>js/jquery.js"></script>
+    <script src="<?php echo base_url();?>js/bootstrap.min.js"></script>
+    <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <script src="<?php echo base_url();?>js/owl.carousel.min.js"></script>
+    <script src="<?php echo base_url();?>js/mousescroll.js"></script>
+    <script src="<?php echo base_url();?>js/smoothscroll.js"></script>
+    <script src="<?php echo base_url();?>js/jquery.prettyPhoto.js"></script>
+    <script src="<?php echo base_url();?>js/jquery.isotope.min.js"></script>
+    <script src="<?php echo base_url();?>js/jquery.inview.min.js"></script>
+    <script src="<?php echo base_url();?>js/wow.min.js"></script>
+    <script src="<?php echo base_url();?>js/main.js"></script>
+	
+	
+	<!-- <script src="<?php echo base_url();?>jss/jquery.js"></script>
+    <script src="<?php echo base_url();?>jss/bootstrap.min.js"></script>
+    <script src="<?php echo base_url();?>jss/jquery.prettyPhoto.js"></script>
+    <script src="<?php echo base_url();?>jss/main.js"></script> -->
+</body>
+</html>
