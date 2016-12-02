@@ -1,8 +1,8 @@
-<div class="navbar-dinarpal navbar-default navbar-fixed-top">
+<div class="navbar-dinarpal navbar-default navbar-fixed-top"style="background-color: #000;">
 	<div class="container">
 	
 		<center>
-		<nav class="navbar navbar-inverse" role="navigation">
+                    <nav class="navbar navbar-inverse" role="navigation" style="background-color: #000">
                   <div class="container-fluid">
                     <!-- Brand and toggle get grouped for better mobile display -->
                     <div class="navbar-header">
@@ -12,11 +12,11 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                       </button>
-                      <a class="navbar-brand" href="<?=site_url('login')?>"><img src="<?=base_url()?>assets/images/DP-Logo-small.png" width="106" height="29" alt="DinarPal" /></a>
+                      <a class="navbar-brand" href="<?=site_url('login')?>"><img src="<?=base_url()?>assets/imagescoop/images5.png" width="150px"alt="DinarPal" /></a>
                     </div>
                 
                     <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="background-color: #000;">
                       <ul class="nav navbar-nav">
                       
                         <li><a href="<?=site_url('version3')?>"><i class="fa fa-home"></i>Home</a></li>

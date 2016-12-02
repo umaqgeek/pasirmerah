@@ -139,8 +139,7 @@
             <p align="center" style="font-size:11px;">
                 
                 <BR>
-
-Al-DinarPal Group. All right reserved 2013 - <?php echo date("Y"); ?>. 
+DinarPal Group. All right reserved 2013 - <?php echo date("Y"); ?>. 
 
                <!-- DinarPal Sdn. Bhd. (Co. Reg. 1041059-H) All Right Reserve &copy; 2014-->
 

@@ -8,7 +8,7 @@
     <meta name="description" content="Dinarpal Payment Gateway">
     <meta name="author" content="DinarPal">
     <!-- batas -->
-    <title>DinarPal</title>
+    <title>DinarPal Coop</title>
     <link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url().'assets/design_ori/favicon.ico' ?>">
     <link href="<?php echo base_url().'assets/css/bootstrap.css' ?>" rel="stylesheet">
     <link href="<?php echo base_url().'assets/css/bootigniter.css' ?>" rel="stylesheet">
@@ -173,7 +173,9 @@ input.cmn-toggle-round:checked + label:after {
     to { -webkit-transform: rotate(360deg); }
 }
 
-/*--account comparision- register--*/
+/*=======================================
+--account comparision- register--
+=========================================*/
 @media (max-width:991px) {
   .choose-account {
     -webkit-column-count: 1;
@@ -196,11 +198,11 @@ input.cmn-toggle-round:checked + label:after {
 }
 
 .choose-account-box--even-padding {
-    padding-bottom: 40px;
+    padding-bottom: 10px;
 }
 
 .choose-account-box--large {
-    min-height: 575px;
+    min-height: 400px;
 }
 
 .choose-account-box__color-bar {
@@ -543,6 +545,237 @@ input.cmn-toggle-round:checked + label:after {
 [ng\:cloak] {
     display: none!important;
 }
+
+/*===========================
+         Login Form
+=============================*/
+body{
+	background:url("<?= base_url() . 'assets/imagess/bg.jpg' ?>")  no-repeat center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+ 	background-size: cover;
+ 	position:relative;
+
+}
+
+.login-form {
+    background: url("<?= base_url() . 'assets/imagess/bgf.png' ?>") no-repeat 100% 0%;
+    background-size: 100%;
+    width:37%;
+    margin:10% auto 4% auto;
+    position: relative;
+}
+.login-form h1{
+    text-align:left;
+    color: #fafafa;
+    font-weight:500;
+    position:absolute;
+    top:7%;
+    left:11%;
+    margin:34px 0;
+} 
+.login-form h2 a{
+    text-align:right;
+    color: #fafafa;
+    font-weight:500;
+    position:absolute;
+    top:9.5%;
+    right:11%;
+    margin:34px 0;
+} 
+form {
+    padding:32% 3em;
+}
+form li{
+    border:1px solid #FFC600;
+    list-style:none;
+    margin-bottom:16px;
+    width:100%;
+    background: #FFC600;
+
+}
+
+.icon{
+    background:url("<?= base_url() . 'assets/imagess/icons.png' ?>")  no-repeat 0px 0px;
+    height:40px;
+    width:40px;
+    display: block;
+    float:left;
+    margin:5px -11px 0px 0px
+}
+
+.user{
+    background: url("<?= base_url() . 'assets/imagess/icons.png' ?>") no-repeat 7px 1px;;
+
+}
+.lock{
+    background: url("<?= base_url() . 'assets/imagess/icons.png' ?>") no-repeat -31px 2px;
+}
+.arrow{
+    background: url("<?= base_url() . 'assets/imagess/icons.png' ?>") no-repeat -62px 11px;
+    position: absolute;
+}
+input[type="text"], input[type="password"] {
+    width: 82%;
+    padding: 0.5em 1em 0.5em 1em;
+    color: #fff;
+    font-size: 20px;
+    outline: none;
+    background: none;
+    border: none;
+}
+
+input[type="submit"]{
+    float:left;
+    font-size:18px;
+    display: inline-block;
+    font-weight:600;
+    color: #615F5F;
+    transition: 0.1s all;
+    -webkit-transition: 0.1s all;
+    -moz-transition: 0.1s all;
+    -o-transition: 0.1s all;
+    cursor: pointer;
+    outline: none;
+    padding:15px 10px;
+    margin-top:3px;
+    background: #222;
+    width:45%;
+    border:1px solid #222;
+}
+input[type="submit"]:hover{
+    background: #FFC600;
+    border:1px solid #FFC600;
+}
+.forgot{
+    margin:30px 7px;
+}
+.forgot h3 a{
+    color:#fff;
+    font-size:15px;
+    float:right;
+    font-weight:600;
+    margin-top:19px;
+}
+.forgot h3 a:hover{
+    color:#FFC600;
+}
+/****************/
+.copy-right {
+    text-align:center;
+}
+.copy-right p {
+    color: #fff;
+    font-size: 1em;	
+    font-weight: 600;
+}
+.copy-right p a {
+    font-size: 1em;
+    color:#EAC131;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+.copy-right p a:hover {
+    color:#fff;
+}
+/*-----start-responsive-design------*/
+@media (max-width:1024px){
+    .login-form  {
+        margin:8% auto 0;
+        width:45%;
+    }
+    .copy-right {
+        left: 41%;
+        bottom:-18%;
+    }
+}
+@media (max-width:768px){
+    .login-form  {
+        margin:12% auto 0;
+        width:57%;
+    }
+    .copy-right {
+        left:38%;
+        bottom:-14%;
+    }
+}
+@media (max-width:640px){                                  
+    .login-form  {
+        margin:13% auto 0;
+        width:70%;
+    }
+    .copy-right {
+        left:36%;
+        bottom:-18%;
+    }
+}
+@media (max-width:480px){                                  
+    .login-form  {
+        margin:20% auto 0;
+        width:90%;
+    }
+    .copy-right {
+        left:30%;
+        bottom:-17%;
+    }
+
+}
+@media (max-width:320px){                                  
+    .login-form  {
+        margin:20% auto 0;
+        width:100%;
+    }
+    .icon{
+        margin:2px -11px 0px 0px;
+    }
+    form{
+        padding:38% 2.5em; 
+    }
+    .login-form h1{
+        font-size:1.7em;
+        left:35%;
+        top:0%;
+    }
+    .login-form h2{
+        font-size:1em;
+        right:29%;
+        top:10%;
+    }
+    input[type="text"], input[type="password"]{
+        font-size:18px;
+        padding: 0.4em 1em 0.45em 1em;15px 2px
+    }
+    .copy-right {
+        left:20%;
+        bottom:9%;
+    }
+    .forgot{
+        text-align:center;
+        margin:5px 2px;
+    }
+    .forgot h3 a{
+        float:none;
+        font-size:14px;
+    }
+    input[type="submit"]{
+        font-size:15px;
+        padding: 10px 10px;
+        width:56%;
+        float:none;
+        margin-top: 5px;
+    }
+    .arrow {
+        background: url(../images/icons.png) no-repeat -62px -6px;
+        left: 29%;
+        top: 62.99%;
+    }
+
+}
+
 
 
     </style>

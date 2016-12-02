@@ -10,11 +10,34 @@ class Login extends CI_Controller
 		parent::__construct();
 //                header('Access-Control-Allow-Origin: *');  
                 
-            if ($this->my_func->getMaintenance() == true) {
-                redirect(site_url('maintenance'));
-            }
+            //if ($this->my_func->getMaintenance() == true) {
+            //    redirect(site_url('maintenance'));
+            //}
         }
         
+        public function validate_credantial()
+        {
+            $this->load->model('membership_model');
+            $query = $this->membership_model->validate();
+            
+            if($query)//if the user's crdential validated..
+            {
+                $data = array(
+                    'me_ic' => $this->input->post('username'),
+                    'is_logged_in' => TRUE
+                );
+                
+                $this->session->set_userdata($data);
+                redirect('member/_viewpage');
+            }
+            
+            else
+            {
+                $this->index();
+            }
+        }
+
+
         public function viewProduct() {
             $v_idx = $this->input->get('v');
             $v_id = $this->my_func->dinarpal_decrypt($v_idx);
@@ -208,8 +231,13 @@ class Login extends CI_Controller
                 
 		$this->_viewpage('registration',$data);
 	}
+        
+        public function register()
+        {
+            $this->_viewpage('registrationPage',$data);
+        }
 
-	public function getstarted()
+        public function getstarted()
 	{
 //            $sess = $this->session->all_userdata();
 //            print_r($sess); die();
