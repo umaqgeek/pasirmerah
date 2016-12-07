@@ -21,17 +21,24 @@
         <!---728x90--->
         <h1>Sign In</h1>
         <form>
+            <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
+                <input type="text" class="form-control" name="username" id="username" placeholder="Username" required>
+            </div>
+            <br />
             
-            <li>
-                <input type="text" class="text" value="IC Number" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'User Name';}" ><a href="#" class=" icon user"></a>
-            </li>
-            <li>
-                <input type="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}"><a href="#" class=" icon lock"></a>
-            </li>
+            <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
+                <input type="password" class="form-control" name="password" id="username" placeholder="password" required>
+            </div>
+            <br />
+            
+            <a> 
+                <button class="button" type="submit" style="width:100%;" href="<?= site_url('member/newMenu/profile') ?>">Log In</button>
+            </a> 
 
             <div class ="forgot">
-                <h3><a href="#">Forgot Password?</a></h3>
-                <input type="submit" onclick="myFunction()" value="Sign In" > <a href="#"></a>                                                                                                                                                                                                                                 </h4>
+                <h3><a href="#">Forgot Password?</a></h3>                                                                                                                                                                                                                               </h4>
             </div>
         </form>
     </div>

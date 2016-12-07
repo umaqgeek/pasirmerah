@@ -23,12 +23,12 @@ class Login extends CI_Controller
             if($query)//if the user's crdential validated..
             {
                 $data = array(
-                    'me_ic' => $this->input->post('username'),
+                    'username' => $this->input->post('username'),
                     'is_logged_in' => TRUE
                 );
                 
                 $this->session->set_userdata($data);
-                redirect('member/_viewpage');
+                redirect('member/newMenu/ewpage');
             }
             
             else

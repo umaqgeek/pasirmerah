@@ -80,12 +80,7 @@ if (isset($page)) {
 
                                     <div class="form-group">
                                         <div class="col-sm-12 col-md-offset-1">
-                                            <input type="text" class="form-control" name="ic" id="me_ic" placeholder="IC (Exp: 901221993028)" value="">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="col-sm-12 col-md-offset-1">
-                                            <input type="text" class="form-control" name="phone" id="me_phone" placeholder="Phone Number (Exp: 0132348991)" value="">
+                                            <input type="text" class="form-control" name="username" id="me_ic" placeholder="username" value="">
                                         </div>
                                     </div>
                                     <div class="form-group">
