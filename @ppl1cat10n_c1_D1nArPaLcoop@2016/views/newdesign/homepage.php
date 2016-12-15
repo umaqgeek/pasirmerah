@@ -73,26 +73,22 @@
                     <div class="collapse navbar-collapse navbar-right">
                         <ul class="nav navbar-nav">
                             <li class="active"><a href="<?=site_url('version3')?>">Home</a></li>
-                            <li><a href="<?php echo site_url('version3/menuAdmin')?>">Admin</a></li>
-                            <li><a href="<?php echo site_url('version3/menu') ?>">User</a></li>
-                            <li><a href="<?php echo site_url('version3/menu') ?>">Saving</a></li>
-                            <li><a href="<?php echo site_url('version3/menu') ?>">Payment</a></li>
-                            <li><a href="<?php echo site_url('version3/menu') ?>">Rahnu</a></li>
-                            <li><a href="<?php echo site_url('version3/menu') ?>">Shop</a></li>
+                            <li><a href="#portfolio">Saving</a></li>
+                            <li><a href="#services">Payment</a></li>
+                            <li><a href="#features">Rahnu</a></li>
+                            <li><a href="#buy">Shop</a></li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">More <i class="fa fa-angle-down"></i></a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="blog-item.html">Corporate Overview</a></li>
-                                    <li><a href="pricing.html">Board Of Co-operative</a></li>
-                                    <li><a href="404.html">Internal Audit Team</a></li>
-                                    <li><a href="shortcodes.html">Syariah Council Member</a></li>
-                                    <li><a href="shortcodes.html">The Management</a></li>
-                                    <li><a href="shortcodes.html">Member Share</a></li>
-                                    <li><a href="shortcodes.html">Faq</a></li>
+                                    <li class="scroll"><a href="<?php echo site_url('version3/corporateOverview') ?>">Overview</a></li>
+                                    <li class="scroll"><a href="<?php echo site_url('version3/bOc') ?>">BoC</a></li>
+                                    <li class="scroll"><a href="<?php echo site_url('version3/auditTeam') ?>">Audit Team</a></li>
+                                    <li class="scroll"><a href="<?php echo site_url('version3/syariah') ?>">Syariah Council</a></li>
+                                    <li class="scroll"><a href="<?php echo site_url('version3/theShare') ?>">Member Share</a></li>
                                 </ul>
                             </li>
                             <li>
-                                <a btn href="<?= site_url('login/getstarted');?>">Login</a></li>
+                                <a btn href="<?= site_url('login');?>">Login</a></li>
                         </ul>
                     </div>
                 </div> 
@@ -441,6 +437,534 @@
                </div>
            </div>
        </section>
+       
+       <section id="portfolio">
+           <div class="container">
+               <div class="section-header">
+                   <h2 class="section-title text-center wow fadeInDown">DinarPal for Saving</h2>
+                   <p class="text-center wow fadeInDown">Keep your montlhy saving 
+                       of gold and silver or dinar and dirham in our secure vault and 
+                       make it accessible. We offers the safest, most cost effective, and secure gold vault storage and silver vault storage services in the precious metals industry</p>
+               </div>
+
+               <div class="row">
+
+                   <div class="col-sm-6">
+                       <div class="media service-box wow fadeInRight">
+                           <div class="pull-left">
+                               <i class="fa fa-university"></i>
+                           </div>
+                           <div class="media-body">
+                               <h4 class="media-heading">Fully Insured</h4>
+                               <p>Our safe gold box vault comes with insurance for every gram</p>
+                           </div>
+                       </div>
+
+                       <div class="media service-box wow fadeInRight">
+                           <div class="pull-left">
+                               <i class="fa fa-files-o"></i>
+                           </div>
+                           <div class="media-body">
+                               <h4 class="media-heading">Low Storage Fees</h4>
+                               <p>Store your gold and silver at 2.5% x item values per year</p>
+                           </div>
+                       </div>
+
+                       <div class="media service-box wow fadeInRight">
+                           <div class="pull-left">
+                               <i class="fa fa-list-alt"></i>
+                           </div>
+                           <div class="media-body">
+                               <h4 class="media-heading">Financial Reporting</h4>
+                               <p>We provide reporting tools to keep track of all 
+                                   your transactions and records making your vaulted 
+                                   gold feel digital.</p>
+                           </div>
+                       </div>
+
+                       <div class="media service-box wow fadeInRight">
+                           <div class="pull-left">
+                               <i class="fa fa-clock-o"></i>
+                           </div>
+                           <div class="media-body">
+                               <h4 class="media-heading">Withdraw At Anytime</h4>
+                               <p>Store it at Malaysia outlet and you can withdraw 
+                                   it at Dubai. More outlet will open soon all over the 
+                                   world. In Sha Allah</p>
+                               <a href="<?= site_url('version3/saving'); ?>" >More...</a>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-sm-6 wow fadeInLeft">
+                       <br>
+                       <br>
+                       <img class="img-responsive" src="<?php echo base_url(); ?>assets/imagess/Guardian-Safe.png" alt="">
+
+                   </div>
+
+               </div>
+           </div><!--/.container-->
+       </section><!--/#portfolio-->
+       
+       <section id="services" >
+           <div class="container">
+
+               <div class="section-header">
+                   <h2 class="section-title text-center wow fadeInDown">DinarPal 
+                       Gram Transactions</h2>
+                   <p class="text-center wow fadeInDown">Feel the new excitement 
+                       using dinar and dirham (gram)&nbsp; to make payment or to 
+                       receive payment. </p>
+               </div>
+
+               <div class="row">
+                   <div class="features">
+                       <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="0ms">
+                           <div class="media service-box">
+                               <div class="pull-left">
+                                   <i class="fa fa-share"></i>
+                               </div>
+                               <div class="media-body">
+                                   <h4 class="media-heading">Send Payment For Free</h4>
+                                   <p class="text-justify wow FadeInDown">You can send unlimited payment using gram or 
+                                       money among members with 0 fee. The minimum transfer 
+                                       amount  is MYR 0.10 for money and 0.1 gram for gold 
+                                       and silver</p>
+                                   <p class="text-justify wow FadeInDown">
+                                       Instantly transfer gold/siver (dinardirham) or fiat to any member
+                                       on the same network for free
+                                   </p>
+                               </div>
+                           </div>
+                       </div><!--/.col-md-4-->
+
+                       <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="200ms">
+                           <div class="media service-box">
+                               <div class="pull-left">
+                                   <i class="fa fa-mobile"></i>
+                               </div>
+                               <div class="media-body">
+                                   <h4 class="media-heading">Recipient can spend or reedem</h4>
+                                   <p class="text-justify wow FadeInDown">
+                                       Receipient can reedem or spend at any time
+                                   </p>
+                               </div>
+                           </div>
+                       </div><!--/.col-md-4-->
+
+                       <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="100ms">
+                           <div class="media service-box">
+                               <div class="pull-left">
+                                   <i class="fa fa-reply"></i>
+                               </div>
+                               <div class="media-body">
+                                   <h4 class="media-heading">Deposit your gold</h4>
+                                   <p class="text-justify wow FadeInDown">Accepting 
+                                       payment into your account just only 2.5% fee from 
+                                       the amount you receive.</p>
+                                   <p class="text-justify wow FadeInDown">
+                                       Depo-keep your DinarPal account with gold or fiat and ready to make gold transfer
+                                   </p>
+                                   <a href="<?= site_url('version3/pg'); ?>" >More...</a>
+                               </div>
+                           </div>
+                       </div><!--/.col-md-4-->
+
+
+
+                   </div>
+               </div><!--/.row-->    
+           </div><!--/.container-->
+       </section><!--/#services-->
+       
+       <section id="sell">
+           <div class="container">
+               <div class="section-header">
+                   <BR><BR><BR><BR>
+                   <h2 class="section-title text-center wow fadeInDown">Sell</h2>
+                   <p class="text-center wow fadeInDown">If you have something to 
+                       sell on your website we suggest you to start accepting payments 
+                       using your DinarPal payment link and payment button.</p>
+               </div>
+
+               <div class="row">
+                   <div class="col-sm-6 wow fadeInLeft">
+                       <img class="img-responsive" src="<?php echo base_url(); ?>assets/imagess/iphone2.png" alt="">
+                   </div>
+                   <div class="col-sm-6">
+                       <div class="media service-box wow fadeInRight">
+                           <div class="pull-left">
+                               <i class="fa fa-hand-o-up"></i>
+                           </div>
+                           <div class="media-body">
+                               <h4 class="media-heading">Unique Payment Link & Button</h4>
+                               <p>Get your link and post it into your blog, web, whatsApp, twitter, instagram and etc</p>
+                           </div>
+                       </div>
+
+                       <div class="media service-box wow fadeInRight">
+                           <div class="pull-left">
+                               <i class="fa fa-facebook-square"></i>
+                           </div>
+                           <div class="media-body">
+                               <h4 class="media-heading">facebook and WhatsApp friendly</h4>
+                               <p>You can even start selling on facebook and on WhatsApp</p>
+                           </div>
+                       </div>
+
+                       <div class="media service-box wow fadeInRight">
+                           <div class="pull-left">
+                               <i class="fa fa-credit-card"></i>
+                           </div>
+                           <div class="media-body">
+                               <h4 class="media-heading">Accept Major Debit Card</h4>
+                               <p>All major credit and debit card are accepted</p>
+
+                           </div>
+                       </div>
+
+                   </div>
+               </div>
+
+
+
+           </div><!--/.container-->
+       </section><!--/#portfolio-->
+       
+       <section id="buy">
+           <div class="container">
+               <div class="section-header">
+                   <BR><BR><BR><BR>
+                   <h2 class="section-title text-center wow fadeInDown">Buy</h2>
+                   <p class="text-center wow FadeInDown">Have you experience the 
+                       sensational of purchasing and paying using dinar and dirham?. 
+                       Now is the time.</p>
+               </div>
+
+               <div class="row">
+
+                   <div class="col-sm-6">
+                       <div class="media service-box wow fadeInRight">
+                           <div class="pull-left">
+                               <i class="fa fa-shopping-cart"></i>
+                           </div>
+                           <div class="media-body">
+                               <h4 class="media-heading">Shop at SouqAnshar</h4>
+                               <p>SouqAnshar is a place to store all your collections, share them and scope out others. Buy, sell, or just browse. Simply open an account on SouqAnshar and another on DinarPal, and link them </p>
+                           </div>
+                       </div>
+
+                       <div class="media service-box wow fadeInRight">
+                           <div class="pull-left">
+                               <i class="fa fa-exchange"></i>
+                           </div>
+                           <div class="media-body">
+                               <h4 class="media-heading">Connecting Buyer and 
+                                   Seller</h4>
+                               <p>We bring buyers and sellers together, reducing steps and costs.</p>
+                           </div>
+                       </div>
+
+                       <div class="media service-box wow fadeInRight">
+                           <div class="pull-left">
+                               <i class="fa fa-truck"></i>
+                           </div>
+                           <div class="media-body">
+                               <h4 class="media-heading">Protecting you from checkout to the delivery</h4>
+                               <p>Shop until you drop</p>
+                           </div>
+                       </div>
+
+                       <div class="media service-box wow fadeInRight">
+                           <div class="pull-left">
+                               <i class="fa fa-archive"></i>
+                           </div>
+                           <div class="media-body">
+                               <h4 class="media-heading">Syariah Compliance</h4>
+                               <p>Muammalah system </p>
+
+                               <a href="<?= site_url('version3/shop'); ?>" >More...</a>
+                           </div>
+                       </div>
+                   </div>
+
+
+                   <div class="col-sm-6 wow fadeInLeft">
+                       <img class="img-responsive" src="<?php echo base_url(); ?>assets/imagess/souqanshar.png" alt="">
+                   </div>
+                   
+               </div>
+           </div><!--/.container-->
+       </section><!--/#portfolio-->
+       
+       <section id="bid">
+           <div class="container">
+               <div class="section-header">
+                   <BR><BR><BR><BR>
+                   <h2 class="section-title text-center wow fadeInDown">Bid</h2>
+                   <p class="text-center wow fadeInDown">For those members who not 
+                       plan to redeem their precious item, we help them to sell in our 
+                       private auction session</p>
+               </div>
+
+               <div class="row">
+                   <div class="col-sm-6 wow fadeInLeft">
+                       <img class="img-responsive" src="<?php echo base_url(); ?>assets/imagess/DnD-Landing-Page.png" alt="">
+                   </div>
+                   <div class="col-sm-6">
+                       <div class="media service-box wow fadeInRight">
+                           <div class="pull-left">
+                               <i class="fa fa-gavel"></i>
+                           </div>
+                           <div class="media-body">
+                               <h4 class="media-heading">Unlimited Bidding</h4>
+                               <p>Bid until you win</p>
+                           </div>
+                       </div>
+
+                       <div class="media service-box wow fadeInRight">
+                           <div class="pull-left">
+                               <i class="fa fa-file"></i>
+                           </div>
+                           <div class="media-body">
+                               <h4 class="media-heading">Low Entering Fees</h4>
+                               <p>Only MYR5.00 per session</p>
+                           </div>
+                       </div>
+
+                       <div class="media service-box wow fadeInRight">
+                           <div class="pull-left">
+                               <i class="fa fa-bell-o"></i>
+                           </div>
+                           <div class="media-body">
+                               <h4 class="media-heading">Easy To Bid</h4>
+                               <p>Bid among the best and no joy bidders</p>
+                           </div>
+                       </div>
+
+                   </div>
+               </div>
+           </div><!--/.container-->
+       </section><!--/#portfolio-->
+       
+       <section id="exchange">
+           <div class="container">
+               <div class="section-header">
+                   <BR><BR><BR><BR>
+                   <h2 class="section-title text-center wow fadeInDown">Gold Exchange Campaign</h2>
+                   <p class="text-center wow fadeInDown">Hurry up and exchange your gold with us!</p>
+               </div>
+
+               <div class="row">
+
+                   <div class="col-sm-6">
+                       <div class="media service-box wow fadeInRight">
+                           <div class="pull-left">
+                               <i class="fa fa-shopping-cart"></i>
+                           </div>
+                           <div class="media-body">
+                               <h4 class="media-heading">Low Exchange Fee</h4>
+                               <p>Just RM 15 / gram </p>
+                           </div>
+                       </div>
+
+                       <div class="media service-box wow fadeInRight">
+                           <div class="pull-left">
+                               <i class="fa fa-coffee"></i>
+                           </div>
+                           <div class="media-body">
+                               <h4 class="media-heading">Full Enjoyment</h4>
+                               <p>Enjoy 100% DinarPal benefit</p>
+                           </div>
+                       </div>
+
+                       <div class="media service-box wow fadeInRight">
+                           <div class="pull-left">
+                               <i class="fa fa-truck"></i>
+                           </div>
+                           <div class="media-body">
+                               <h4 class="media-heading">We Accept All Brand</h4>
+                               <p>All item are been appreciate by DinarPal</p>
+                           </div>
+                       </div>
+                   </div>
+
+
+                   <div class="col-sm-6 wow fadeInLeft">
+                       <img class="img-responsive" src="<?php echo base_url(); ?>assets/imagess/worldmap.png" alt="">
+                   </div>
+
+               </div>
+
+               <br>
+           </div><!--/.container-->
+       </section><!--/#portfolio-->
+       
+       <section id="gac">
+           <div class="container">
+               <div class="section-header">
+                   <BR><BR><BR><BR>
+                   <h2 class="section-title text-center wow fadeInDown">Gold Affordable Campaign (GAC)</h2>
+                   <p class="text-center wow fadeInDown">Anyone can have their gold now</p>
+               </div>
+
+               <div class="row">
+                   <div class="col-sm-6 wow fadeInLeft">
+                       <img class="img-responsive" src="<?php echo base_url(); ?>assets/imagess/gac.png" alt="">
+                   </div>
+                   <div class="col-sm-6">
+                       <div class="media service-box wow fadeInRight">
+                           <div class="pull-left">
+                               <i class="fa fa-gavel"></i>
+                           </div>
+                           <div class="media-body">
+                               <h4 class="media-heading">Affordable</h4>
+                               <p>Just RM 30 / 0.1 gram</p>
+                           </div>
+                       </div>
+
+                       <div class="media service-box wow fadeInRight">
+                           <div class="pull-left">
+                               <i class="fa fa-exchange"></i>
+                           </div>
+                           <div class="media-body">
+                               <h4 class="media-heading">Transferable</h4>
+                               <p>With DinarPal you can send your gold to anyone you like</p>
+                           </div>
+                       </div>
+
+                       <div class="media service-box wow fadeInRight">
+                           <div class="pull-left">
+                               <i class="fa fa-bell-o"></i>
+                           </div>
+                           <div class="media-body">
+                               <h4 class="media-heading">Redeemable</h4>
+                               <p>Can redeem at anytime</p>
+                           </div>
+                       </div>
+
+                   </div>
+               </div>
+           </div><!--/.container-->
+       </section><!--/#portfolio-->
+       
+       <section id="ourgold">
+           <div class="container">
+               <div class="section-header">
+                   <BR><BR><BR><BR>
+                   <h2 class="section-title text-center wow fadeInDown">DinarPal Physical Gold & Silver</h2>
+                   <p class="text-center wow fadeInDown">Lets buy our product</p>
+               </div>
+
+               <div class="row">
+
+                   <div class="col-sm-6">
+                       <div class="media service-box wow fadeInRight">
+                           <div class="pull-left">
+                               <i class="fa fa-shopping-cart"></i>
+                           </div>
+                           <div class="media-body">
+                               <h4 class="media-heading">Competative Price</h4>
+                               <p>Affordable price</p>
+                           </div>
+                       </div>
+
+                       <div class="media service-box wow fadeInRight">
+                           <div class="pull-left">
+                               <i class="fa fa-credit-card"></i>
+                           </div>
+                           <div class="media-body">
+                               <h4 class="media-heading">Buy Back</h4>
+                               <p>Spread up to 10%</p>
+                           </div>
+                       </div>
+
+                       <div class="media service-box wow fadeInRight">
+                           <div class="pull-left">
+                               <i class="fa fa-exchange"></i>
+                           </div>
+                           <div class="media-body">
+                               <h4 class="media-heading">Ar Rahnu Able</h4>
+                               <p>Ar Rahnu accepted</p>
+                           </div>
+                       </div>
+                   </div>
+
+
+                   <div class="col-sm-6 wow fadeInLeft">
+                       <img class="img-responsive" src="<?php echo base_url(); ?>assets/imagess/pic.jpg" style="width: 500px;" alt="">
+                   </div>
+
+
+               </div>
+
+               <br>
+           </div><!--/.container-->
+       </section><!--/#portfolio-->
+       
+       <section id="agent">
+           <div class="container">
+               <div class="section-header">
+                   <BR><BR><BR><BR>
+                   <h2 class="section-title text-center wow fadeInDown">Be Our Agent</h2>
+                   <p class="text-center wow fadeInDown">Anyone can be our agent now!!!</p>
+               </div>
+
+               <div class="row">
+                   <div class="col-sm-6 wow fadeInLeft">
+                       <img class="img-responsive" src="<?php echo base_url(); ?>assets/imagess/agent.png" alt="">
+                   </div>
+                   <div class="col-sm-6">
+                       <div class="media service-box wow fadeInRight">
+                           <div class="pull-left">
+                               <i class="fa fa-credit-card"></i>
+                           </div>
+                           <div class="media-body">
+                               <h4 class="media-heading">Membership fee</h4>
+                               <p>Free registration</p>
+                           </div>
+                       </div>
+
+                       <div class="media service-box wow fadeInRight">
+                           <div class="pull-left">
+                               <i class="fa fa-exchange"></i>
+                           </div>
+                           <div class="media-body">
+                               <h4 class="media-heading">Incentive up to RM20/pcs</h4>
+                               <p>Discount and retail profit</p>
+                           </div>
+                       </div>
+
+                       <div class="media service-box wow fadeInRight">
+                           <div class="pull-left">
+                               <i class="fa fa-gift"></i>
+                           </div>
+                           <div class="media-body">
+                               <h4 class="media-heading">Free 7 pcs 0.5 gram gold coin</h4>
+                               <p>Purchase just 2 pcs of 0.5 gold coin and get 7 pcs gold coin. 
+                                   Consignment (Gold in your account)</p>
+                           </div>
+                       </div>
+
+                       <div class="media service-box wow fadeInRight">
+                           <div class="pull-left">
+                               <i class="fa fa-users"></i>
+                           </div>
+                           <div class="media-body">
+                               <h4 class="media-heading">Incentive Group Sale</h4>
+                               <p>Earn RM 0.10 / 0.1 gram sale
+                                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                   <a href="<?= site_url('version3/agentInfo'); ?>" >More...</a>
+                               </p>
+
+                           </div>
+                       </div>
+
+                   </div>
+               </div>
+           </div><!--/.container-->
+       </section><!--/#portfolio-->
+       
        
         <section id="services" class="service-item">
             <div class="container">
@@ -796,10 +1320,11 @@
                         <div class="widget">
                             <h3>Company</h3>
                             <ul>
-                                <li><a href="#">About us</a></li>
-                                <li><a href="#">Copyright</a></li>
-                                <li><a href="#">Terms of use</a></li>
-                                <li><a href="#">Privacy policy</a></li>
+                                <li><a href="https://localhost/dinarpal_v2/" target="_blank">About us</a></li>
+                                <li><a href="<?=site_url("version3/awards") ?>">Awards</a></li>
+                                <li><a href="<?= site_url("version3/ip") ?>">Intellectual Properties</a></li>
+                                <li><a href="<?=site_url("version3/compliances") ?>">Compliances</a></li>
+                                <li><a href="<?=site_url("version3/support") ?>">Support</a></li>
                                 <li><a href="#">Contact us</a></li>
                             </ul>
                         </div>
@@ -808,8 +1333,7 @@
                         <div class="widget">
                             <h3>Support</h3>
                             <ul>
-                                <li><a href="#">Faq</a></li>
-                                <li><a href="#">Documentation</a></li>
+                                <li><a href="<?=site_url("version3/faq") ?>">Faq</a></li>
                             </ul>
                         </div>
                     </div>

@@ -547,31 +547,7 @@ class SimpleLoginSecure {
             $user_data['logged_in_chat'] = true;
             $this->CI->session->set_userdata($user_data);
             
-            $myfile = fopen($this->file_users, "r") or ("-");
-            if ($myfile != "-") {
-                $bol_ada = false;
-                // Output one line until end-of-file
-                while(!feof($myfile)) {
-                    $line = fgets($myfile);
-                    $pecah = explode($this->delimeter, $line);
-                    $me_id_user = $pecah[0];
-                    if ($user_data['me_id'] == $me_id_user) {
-                        $bol_ada = true;
-                        break;
-                    }
-                }
-                if ($bol_ada == false) {
-                    $fp = fopen($this->file_users, 'a');
-                    $text = $user_data['me_id'].$this->delimeter.$user_data['me_username'].$this->delimeter.$user_data['me_type']."\n";
-                    fwrite($fp, $text);
-                    fclose($fp);
-                }
-            } else {
-                $fp = fopen($this->file_users, 'a');
-                $text = $user_data['me_id'].$this->delimeter.$user_data['me_username'].$this->delimeter.$user_data['me_type']."\n";
-                fwrite($fp, $text);
-                fclose($fp);
-            }
+            
 
             return true;
         } else {

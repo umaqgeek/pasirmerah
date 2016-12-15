@@ -14,7 +14,7 @@
 
     <div class="col-md-3 col-md-offset-1" class="shadow" style=" border-radius: 5px; border: 2px solid #FFF; padding: 20px 20px 20px; ">
 
-        <a href="<?php echo site_url('version3/profile') ?>" style="text-decoration:none">
+        <a href="<?php echo site_url('member/member_profile') ?>" style="text-decoration:none">
 
             <div class="shadow" style=" border-radius: 5px; border: 1px solid #ccc;  padding: 10px;  height:130px; ">
                 <center>
@@ -29,7 +29,7 @@
     </div>
 
     <div class="col-md-3 "  style=" border-radius: 5px; border: 2px solid #FFF; padding: 20px 20px 20px; ">
-        <a href="<?php echo site_url('version3/payment') ?>" style="text-decoration:none">
+        <a href="<?php echo site_url('member/member_payment') ?>" style="text-decoration:none">
             <div class="shadow" style=" border-radius: 5px; border: 1px solid #ccc;  padding: 10px; height:130px; ">
                 <center>
                     <img src="<?= base_url() . 'assets/images/commision1.png' ?>"  width="80px" height="80px" >  
@@ -41,7 +41,7 @@
     </div>
 
     <div class="col-md-3 "  style=" border-radius: 5px; border: 2px solid #FFF; padding: 20px 20px 20px; ">
-        <a href="<?php echo site_url('version3/memberShare') ?>" style="text-decoration:none">
+        <a href="<?php echo site_url('member/member_share') ?>" style="text-decoration:none">
             <div class="shadow" style=" border-radius: 5px; border: 1px solid #ccc;  padding: 10px; height:130px; ">
                 <center>
                     <img src="<?= base_url() . 'assets/images/commision1.png' ?>"  width="80px" height="80px" >  
@@ -53,7 +53,7 @@
     </div>
 
     <div class="col-md-3 col-md-offset-4" class="shadow" style=" border-radius: 5px; border: 2px solid #FFF; padding: 20px 20px 20px; ">
-        <a href="<?php echo site_url('version3/document') ?>" style="text-decoration:none">
+        <a href="<?php echo site_url('member/member_document') ?>" style="text-decoration:none">
             <div class="shadow" style=" border-radius: 5px; border: 1px solid #ccc;  padding: 10px;  height:130px; ">
                 <center>
                     <img src="<?= base_url() . 'assets/images/overview1.png' ?>"  width="80px" height="80px" >  

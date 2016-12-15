@@ -35,6 +35,76 @@ class Staff extends MY_Controller {
         $this->load->view($this->parent_page . '/' . $page, $data);
         $this->load->view($this->parent_page . '/footer');
     }
+    
+    function staff_menu(){
+        $this->load->view("staff/header");
+        $this->load->view("staff/nav");
+        $this->load->view("staff/admin/admin", true);
+        $this->load->view("staff/footer");
+    }
+    
+    function staff_profile() {
+        $this->load->view("staff/header");
+        $this->load->view("staff/nav");
+        $this->load->view("staff/admin/adminProfile", true);
+        $this->load->view("staff/footer");
+    }
+    
+    function manage_member() {
+        $this->load->view("staff/header");
+        $this->load->view("staff/nav");
+        $this->load->view("staff/menu/manageMember", true);
+        $this->load->view("staff/footer");
+    }
+    
+    function add_member() {
+        $this->load->view("staff/header");
+        $this->load->view("staff/nav");
+        $this->load->view("staff/manageMember/addmember", true);
+        $this->load->view("staff/footer");
+    }
+    
+    function manage_member_() {
+        $this->load->view("staff/header");
+        $this->load->view("staff/nav");
+        $this->load->view("staff/manageMember/manageMember", true);
+        $this->load->view("staff/footer");
+    }
+
+    function manage_payment() {
+        $this->load->view("staff/header");
+        $this->load->view("staff/nav");
+        $this->load->view("staff/managePayment/payment", true);
+        $this->load->view("staff/footer");
+    }
+    
+    function menu() {
+        $this->load->view("staff/header");
+        $this->load->view("staff/nav");
+        $this->load->view("staff/menu/share", true);
+        $this->load->view("staff/footer");
+    }
+    
+    function manageShare() {
+        $this->load->view("staff/header");
+        $this->load->view("staff/nav");
+        $this->load->view("staff/manageShare/manageShare", true);
+        $this->load->view("staff/footer");
+    }
+    
+    function manageDividen() {
+        $this->load->view("staff/header");
+        $this->load->view("staff/nav");
+        $this->load->view("staff/manageShare/manageDividen", true);
+        $this->load->view("staff/footer");
+    }
+    
+    function manageConfig() {
+        $this->load->view("staff/header");
+        $this->load->view("staff/nav");
+        $this->load->view("staff/manageConfig/config", true);
+        $this->load->view("staff/footer");
+    }
 
     public function _papartable($data = '', $output = 'dashboard', $menu1 = '11', $title = 'Dashboard') {
         $this->load->view($this->parent_page . '/header');
@@ -66,84 +136,7 @@ class Staff extends MY_Controller {
         $this->m_dinarpal_config->edit($dc_id, $data_dc);
     }
 
-    public function newMenu($output = 'dashboard', $menu1 = '11') {
-        $data = array();
-        if ($output != 'dashboard') {
-            $title = 'Dashboard';
-            switch ($menu1) {
-
-                case 'test': $title = 'Menu Lame';
-                    break;
-                case '01': $title = 'Rahnu';
-                    break;
-                case '02': $title = 'Send Payment';
-                    break;
-                case '03': $title = 'Keep';
-                    break;
-                case '04': $title = 'Sell-Buy';
-                    break;
-                case '05': $title = 'Bid';
-                    break;
-                case '06':
-                    //$data['construction_dinarpal'] = 1;
-                    $title = 'Overview';
-                    break;
-                case '07': $title = 'Merchant';
-                    break;
-                case '08': $title = 'Profile';
-                    break;
-                case '09': $title = 'Transaction';
-                    break;
-                case '010': $title = 'Deposit';
-                    break;
-                case '011': $title = 'Withdrawal';
-                    break;
-                case '012': $title = 'Redeem';
-                    break;
-                case '014': $title = 'Amanah Deal';
-                    break;
-                case '015': $title = 'Vault';
-                    break;
-                case '016': $title = 'Regular Transaction';
-                    break;
-                case '017':
-                    $title = 'Walk-In Deposit';
-                    break;
-                case '018':
-                    $title = 'Add Investment and Account Adjustment';
-                    break;
-                case '019': $title = 'Manage Profile';
-                    break;
-                case '020': $title = 'Manage Member';
-                    break;
-                case '021':
-                    $title = 'Manage Configuration';
-                    break;
-                case '022': $title = 'Manage Account';
-                    break;
-                case '023':
-//                                    $data['construction_dinarpal'] = 1;
-                    $title = 'Manage Staff';
-                    break;
-                case '024':
-                    $data['construction_dinarpal'] = 1;
-                    $title = 'Manage License';
-                    break;
-                case '025': $title = 'Ittihad';
-                    break;
-                case '026':
-                    $title = 'Manage Maintenance';
-                    break;
-                case '027':
-                    $title = 'Ads Campaign';
-                    break;
-            }
-            $this->_papar($data, 'newMenu/' . $output, $menu1, $title);
-        } else {
-            $this->_papar();
-        }
-    }
-
+    
     public function advertisingAndPromotions($output = 'dashboard', $menu1 = '11') {
         $data = array();
         if ($output != 'dashboard') {
@@ -8667,23 +8660,6 @@ class Staff extends MY_Controller {
             'mos_id' => 1
         );
         $this->m_members->edit($me_id, $data_me);
-
-        $texts = "";
-        $myfile = fopen($this->file_users, "r") or ( "-");
-        if ($myfile != "-") {
-            // Output one line until end-of-file
-            while (!feof($myfile)) {
-                $line = fgets($myfile);
-                $pecah = explode($this->delimeter, $line);
-                $me_id_user = $pecah[0];
-                if ($me_id != $me_id_user) {
-                    $texts .= $line;
-                }
-            }
-        }
-        $fp = fopen($this->file_users, 'w');
-        fwrite($fp, $texts);
-        fclose($fp);
 
         $this->simpleloginsecure->logout();
         redirect(site_url());

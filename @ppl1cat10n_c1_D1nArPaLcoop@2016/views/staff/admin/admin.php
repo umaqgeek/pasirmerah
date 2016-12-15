@@ -16,7 +16,7 @@
 
                 <div class="col-md-3 col-md-offset-1" class="shadow" style=" border-radius: 5px; border: 2px solid #FFF; padding: 20px 20px 20px; ">
 
-                    <a href="<?= site_url('staff/adminProfile') ?>" style="text-decoration:none">
+                    <a href="<?= site_url('staff/staff_profile') ?>" style="text-decoration:none">
 
                         <div class="shadow" style=" border-radius: 5px; border: 1px solid #ccc;  padding: 10px;  height:130px; ">
                             <center>
@@ -31,7 +31,7 @@
                 </div>
 
                 <div class="col-md-3 "  style=" border-radius: 5px; border: 2px solid #FFF; padding: 20px 20px 20px; ">
-                    <a href="<?= site_url('version3/manageMember') ?>" style="text-decoration:none">
+                    <a href="<?= site_url('staff/manage_member') ?>" style="text-decoration:none">
                         <div class="shadow" style=" border-radius: 5px; border: 1px solid #ccc;  padding: 10px; height:130px; ">
                             <center>
                                 <img src="<?= base_url() . 'assets/images/overview1.png' ?>"  width="80px" height="80px" >  
@@ -43,7 +43,7 @@
                 </div>
                 
                 <div class="col-md-3 " style=" border-radius: 5px; border: 2px solid #FFF; padding: 20px 20px 20px; ">
-                    <a href="<?php echo site_url('version3/managePayment') ?>" style="text-decoration:none">
+                    <a href="<?php echo site_url('staff/manage_payment') ?>" style="text-decoration:none">
 
                         <div class="shadow" style=" border-radius: 5px; border: 1px solid #ccc;  padding: 10px; height:130px; ">
                             <center>
@@ -56,7 +56,7 @@
                 </div>
                 
                 <div class="col-md-3 col-md-offset-3" style=" border-radius: 5px; border: 2px solid #FFF; padding: 20px 20px 20px; ">
-                    <a href="<?php echo site_url('version3/share') ?>" style="text-decoration:none">
+                    <a href="<?php echo site_url('staff/menu') ?>" style="text-decoration:none">
 
                         <div class="shadow" style=" border-radius: 5px; border: 1px solid #ccc;  padding: 10px; height:130px; ">
                             <center>
@@ -69,7 +69,7 @@
                 </div>
                 
                 <div class="col-md-3  "  style=" border-radius: 5px; border: 2px solid #FFF; padding: 20px 20px 20px; ">
-                    <a href="<?= site_url('member/affiliate/advertisingAndPromotions/1994') ?>" style="text-decoration:none">
+                    <a href="<?= site_url('staff/manageConfig') ?>" style="text-decoration:none">
                         <div class="shadow" style=" border-radius: 5px; border: 1px solid #ccc;  padding: 10px; height:130px; ">
                             <center>
                                 <img src="<?= base_url() . 'assets/images/images.png' ?>"  width="80px" height="80px" >  

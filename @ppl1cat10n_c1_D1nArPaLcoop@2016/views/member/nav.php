@@ -52,7 +52,7 @@
             </li>
             
             <li>
-                <a href="<?=site_url('staff/logout')?>" style=" padding-top:1.5em;" >
+                <a href="<?=site_url('member/logout')?>" style=" padding-top:1.5em;" >
                     <i class="fa fa-sign-out"></i> Logout
                 </a>
             </li>

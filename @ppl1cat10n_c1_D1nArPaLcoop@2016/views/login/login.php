@@ -20,7 +20,7 @@
     <div class="login-form">
         <!---728x90--->
         <h1>Sign In</h1>
-        <form>
+        <form method="post" action="<?=site_url('login/asklogin'); ?>">
             <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
                 <input type="text" class="form-control" name="username" id="username" placeholder="Username" required>
@@ -34,7 +34,7 @@
             <br />
             
             <a> 
-                <button class="button" type="submit" style="width:100%;" href="<?= site_url('member/newMenu/profile') ?>">Log In</button>
+                <button class="button" type="submit" style="width:100%;">Log In</button>
             </a> 
 
             <div class ="forgot">

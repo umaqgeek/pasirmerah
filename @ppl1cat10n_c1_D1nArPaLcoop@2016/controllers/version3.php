@@ -28,72 +28,41 @@ class Version3 extends CI_Controller {
        // $this->load->view("newdesign/footer.php", true);
     }
     
-    public function login() {
-        $this->load->view("newdesign/profile", true);
+    
+    public function corporateOverview() {
+        $this->load->view("newdesign/corporateOverview", true);
     }
     
-    public function menu() {
-        $this->load->view("newdesign/profile", true);
+    public function bOc() {
+        $this->load->view("newdesign/bOc", true);
     }
     
-    public function menuAdmin() {
-        $this->load->view("newdesign/admin", true);
+    public function auditTeam() {
+        $this->load->view("newdesign/auditTeam", true);
     }
     
-    public function profile() {
-        $this->load->view("newdesign/myprofile", true);
+    public function syariah() {
+        $this->load->view("newdesign/syariah", true);
     }
     
-    public function payment() {
-        $this->load->view("newdesign/payment", true);
-    }
-    
-    public function managepayment() {
-        $this->load->view("newdesign/managepayment", true);
-    }
-    
-    public function adminProfile() {
-        $this->load->view("newdesign/adminProfile", true);
-    }
-    
-    public function manageMember() {
-        $this->load->view("newdesign/manageMember", true);
+    public function awards() {
+        $this->load->view("newdesign/awards", true);
     }
     
     public function faq() {
         $this->load->view("newdesign/faq", true);
     }
     
-    public function share() {
-        $this->load->view("newdesign/share", true);
+    public function ip() {
+        $this->load->view("newdesign/ip", true);
     }
     
-    public function addmember() {
-        $this->load->view("newdesign/addmember", true);
+    public function compliances() {
+        $this->load->view("newdesign/compliances", true);
     }
     
-    public function manageProfile() {
-        $this->load->view("newdesign/manageProfile", true);
-    }
-    
-    public function manageShare() {
-        $this->load->view("newdesign/manageShare", true);
-    }
-    
-    public function manageDividen() {
-        $this->load->view("newdesign/manageDividen", true);
-    }
-    
-    public function memberShare() {
-        $this->load->view("newdesign/memberShare", true);
-    }
-    
-    public function document() {
-        $this->load->view("newdesign/document", true);
-    }
-    
-    public function config() {
-        $this->load->view("newdesign/config", true);
+    public function support() {
+        $this->load->view("newdesign/support", true);
     }
 
 }

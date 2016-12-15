@@ -426,34 +426,6 @@ class Login extends CI_Controller
 		redirect(site_url('login'));
 	}
 	
-	public function tukaqEmas($stat = 1)
-	{
-		if ($stat == 1) {
-			$data = array(
-				'item_type' => $this->m_item_type->getAll(),
-				'purity' => $this->m_purity->getAll()
-			);
-			$this->_viewpage('v_tukaq_emas', $data);
-		} else {
-			$item_type = $this->m_item_type->getAll();
-			$purity = $this->m_purity->getAll();
-			if ($purity) {
-				foreach ($purity as $pu) {
-					if ($item_type) { 
-						foreach ($item_type as $it) {
-							$data = array(
-								'itp_price' => $this->input->post($pu->pu_id.'_'.$it->it_id)
-							);
-							$this->m_item_type_purity->edit_calculator($pu->pu_id, $it->it_id, $data);
-						}
-					}
-				}
-			}
-			$this->session->set_flashdata('sucess', 'Save success ...');
-			redirect(site_url('login/tukaqEmas'));
-		}
-	}
-        
         public function asklogin()
         {
                 $username = $this->input->post('username');
@@ -493,47 +465,15 @@ class Login extends CI_Controller
                         }
 			
 			if ($ml_id == 3) {
-                                if($this->input->post('product')) {
-                                    $p = $this->input->post('product');
-                                    redirect(site_url('payment/checkPayment/?product='.$p));
-                                } else {
-                                    
-                                    $vp = $this->input->cookie('vpurchase');
-                                    if (isset($vp) && !empty($vp)) {
-//                                        die($vp);
-                                        redirect(site_url('member/muamalat/purchase2/34'));
-                                    }
-                                    
-                                    if (isset($sess['msg_login'])) {
-//                                        redirect(site_url('member/newMenu/deposit/10'));
-                                        redirect(site_url('member/profile/profile/12'));
-                                    } else {
-                                        redirect(site_url('member'));
-                                    }
-                                }
+                                redirect(site_url('member/member_menu'));
 			} else if ($ml_id == 2) {
-				redirect(site_url('staff/newMenu/overview/06'));
-			} else if ($ml_id == 1) {
-				redirect(site_url('pisang'));
+				redirect(site_url('staff/staff_menu'));
+			
 			} else {
 				$this->session->set_flashdata('error','Page were not ready yet!');
 				redirect(site_url('login'));
 			}
 			
-			/*$me_account_type = $this->session->userdata('me_account_type');
-			// login sucess
-			if ($me_account_type == '1') {
-				redirect('staff');
-			}
-			else if ($me_account_type == '2') {
-				redirect('member');
-			}
-			else if ($me_account_type == '3') {
-				redirect('pisang');
-			}
-			else {
-				redirect('login');
-			}*/
 		}
 		else if ($username == 'umaq' && $password == 'umaq123')
 		{

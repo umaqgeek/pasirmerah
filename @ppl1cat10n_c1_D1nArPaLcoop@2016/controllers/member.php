@@ -11,13 +11,20 @@ class Member extends MY_Controller {
                 
  	}
         
-         public function profile() {
+        public function document()
+        {
+            $data['a'] = 'haha';
+            $data['b'] = 'hehe';
+            $this->_viewpage('document/document', $data);
+        }
+        
+        public function share() {
         $data['a'] = 'haha';
         $data['b'] = 'hehe';
-        $this->_viewpage('newMenu/profile', $data);
+        $this->_viewpage('share/share', $data);
     }
 
-    function _viewpage($page = 'profile2', $data = '') {
+    function _viewpage($page = 'profile', $data = '') {
         // check for the flashdata
         if ($this->session->flashdata('error') != "")
             $data['error'] = $this->session->flashdata('error');
@@ -29,6 +36,42 @@ class Member extends MY_Controller {
         $this->load->view($this->parent_page . '/header');
         $this->load->view($this->parent_page . '/nav');
         $this->load->view($this->parent_page . '/' . $page, $data);
+    }
+
+    public function member_menu() 
+     {
+        $this->load->view("member/header");
+        $this->load->view("member/nav");
+        $this->load->view("member/newMenu/profile", true);
+        $this->load->view("member/footer");
+    }
+    
+    public function member_profile() {
+        $this->load->view("member/header");
+        $this->load->view("member/nav");
+        $this->load->view("member/profile/myprofile", true);
+        $this->load->view("member/footer");
+    }
+    
+    public function member_payment() {
+        $this->load->view("member/header");
+        $this->load->view("member/nav");
+        $this->load->view("member/payment/payment", true);
+        $this->load->view("member/footer");
+    }
+    
+    public function member_share() {
+        $this->load->view("member/header");
+        $this->load->view("member/nav");
+        $this->load->view("member/share/share", true);
+        $this->load->view("member/footer");
+    }
+    
+    public function member_document() {
+        $this->load->view("member/header");
+        $this->load->view("member/nav");
+        $this->load->view("member/document/document", true);
+        $this->load->view("member/footer");
     }
 
     public function _papar($data='', $output='dashboard', $menu1='11', $title='E-Favorite') 
@@ -6012,22 +6055,6 @@ class Member extends MY_Controller {
             );
             $this->m_members->edit($me_id, $data_me);
             
-            $texts = "";
-            $myfile = fopen($this->file_users, "r") or ("-");
-            if ($myfile != "-") {
-                // Output one line until end-of-file
-                while(!feof($myfile)) {
-                    $line = fgets($myfile);
-                    $pecah = explode($this->delimeter, $line);
-                    $me_id_user = $pecah[0];
-                    if ($me_id != $me_id_user) {
-                        $texts .= $line;
-                    }
-                }
-            }
-            $fp = fopen($this->file_users, 'w');
-            fwrite($fp, $texts);
-            fclose($fp);
             
             $this->simpleloginsecure->logout();
             redirect(site_url('login'));
